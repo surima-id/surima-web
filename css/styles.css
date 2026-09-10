@@ -443,11 +443,14 @@ table.info-table {
   background: var(--card);
 }
 
-.gallery-grid img {
+.gallery-grid img,
+.gallery-grid video {
+  display: block;
   width: 100%;
   height: 220px;
   object-fit: cover;
   object-position: top;
+  background: #0b1f16;
 }
 
 .gallery-grid figcaption {
