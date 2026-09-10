@@ -427,39 +427,115 @@ table.info-table {
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
-.riichi-tile {
+/* Discard river: tile row with the riichi deposit laid across the front. */
+
+.discard-river {
+  --tile-w: 52px;
+  --tile-h: calc(var(--tile-w) * 205 / 154);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  width: 70px;
-  gap: 10px;
+  margin: 18px 0;
 }
 
-.riichi-tile .tile-sideways {
-  transform: rotate(90deg);
-  margin: 9px 0;
+.discard-river .river-tiles {
+  margin: 0;
+}
+
+/* The rotated tile keeps its own layout box, sized to the rotated footprint,
+   so it never overlaps its neighbours. */
+.tile-sideways {
+  position: relative;
+  display: inline-block;
+  width: var(--tile-h);
+  height: var(--tile-w);
+  flex: 0 0 auto;
+  /* Shadow lives on the wrapper so it stays cast downward, not rotated. */
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.15));
+}
+
+.tile-sideways img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--tile-w);
+  transform: translate(-50%, -50%) rotate(90deg);
+  box-shadow: none;
 }
 
 .tenbou-stick {
   position: relative;
-  width: 62px;
-  height: 10px;
+  width: 100%;
+  max-width: calc(var(--tile-w) * 5);
+  height: calc(var(--tile-w) / 4);
+  margin-top: 14px;
+  flex-shrink: 0;
   background: #f8f4e8;
-  border-radius: 5px;
+  border-radius: 999px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.18);
 }
 
+/* Single centred red dot: the 1.000 point denomination. */
 .tenbou-stick::after {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 50%;
   left: 50%;
-  width: 10px;
-  transform: translateX(-50%);
+  width: calc(var(--tile-w) / 4 - 4px);
+  height: calc(var(--tile-w) / 4 - 4px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
   background: var(--red-600);
 }
+
+/* --------------------------------- Lightbox --------------------------------- */
+
+.zoomable { cursor: zoom-in; }
+
+body.lightbox-open { overflow: hidden; }
+
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 12, 0.85);
+  z-index: 999;
+  overflow: auto;
+  text-align: center;
+  padding: 32px;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay.open { display: block; }
+
+/* Opens at the image's natural size and scrolls, so dense reference
+   sheets stay readable instead of being shrunk back to the viewport. */
+.lightbox-overlay img {
+  max-width: none;
+  height: auto;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,0.22); }
 
 /* --------------------------------- Gallery ---------------------------------- */
 

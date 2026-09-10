@@ -15,3 +15,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var zoomables = document.querySelectorAll("img.zoomable");
+  if (!zoomables.length) return;
+
+  var overlay = document.createElement("div");
+  overlay.className = "lightbox-overlay";
+
+  var closeBtn = document.createElement("button");
+  closeBtn.className = "lightbox-close";
+  closeBtn.setAttribute("aria-label", "Tutup");
+  closeBtn.textContent = "×";
+
+  var overlayImg = document.createElement("img");
+
+  overlay.appendChild(closeBtn);
+  overlay.appendChild(overlayImg);
+  document.body.appendChild(overlay);
+
+  function close() {
+    overlay.classList.remove("open");
+    document.body.classList.remove("lightbox-open");
+  }
+
+  zoomables.forEach(function (img) {
+    img.addEventListener("click", function () {
+      overlayImg.src = img.src;
+      overlayImg.alt = img.alt;
+      overlay.classList.add("open");
+      document.body.classList.add("lightbox-open");
+      overlay.scrollTop = 0;
+      overlay.scrollLeft = 0;
+    });
+  });
+
+  overlay.addEventListener("click", close);
+  closeBtn.addEventListener("click", close);
+  overlayImg.addEventListener("click", function (e) { e.stopPropagation(); });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") close();
+  });
+});
