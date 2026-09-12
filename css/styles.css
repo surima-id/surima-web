@@ -429,19 +429,46 @@ table.info-table {
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
 }
 
-/* Discard river: tile row with the riichi deposit laid across the front. */
+/* Discard river: the riichi deposit rests in front of the player, between them
+   and their discards, so the stick sits above the river rows here. */
 
 .discard-river {
   --tile-w: 52px;
   --tile-h: calc(var(--tile-w) * 205 / 154);
+  --river-gap: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 18px 0;
 }
 
+/* A real river is six tiles wide, then wraps; pinning the block to that width
+   keeps row two starting under column one instead of centring under row one. */
+.river-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--river-gap);
+  width: calc(var(--tile-w) * 6 + var(--river-gap) * 5);
+  max-width: 100%;
+}
+
 .discard-river .river-tiles {
   margin: 0;
+  gap: var(--river-gap);
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.discard-river .river-tiles > img {
+  width: var(--tile-w);
+}
+
+/* Six tiles plus gaps must still fit a phone, so shrink the whole river. */
+@media (max-width: 420px) {
+  .discard-river {
+    --tile-w: 42px;
+    --river-gap: 5px;
+  }
 }
 
 /* The rotated tile keeps its own layout box, sized to the rotated footprint,
@@ -470,7 +497,7 @@ table.info-table {
   width: 100%;
   max-width: calc(var(--tile-w) * 5);
   height: calc(var(--tile-w) / 4);
-  margin-top: 14px;
+  margin-bottom: 14px;
   flex-shrink: 0;
   background: #f8f4e8;
   border-radius: 999px;
