@@ -391,6 +391,78 @@ section.tight { padding: 40px 0; }
   text-align: left;
 }
 
+/* --------------------------------- Venues ---------------------------------- */
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.venue-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.venue-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* Logo slot: falls back to a brand monogram until a real logo file is dropped in. */
+.venue-logo {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+
+.venue-logo.monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  color: var(--green-700);
+  text-transform: uppercase;
+}
+
+.venue-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.venue-card > p {
+  font-size: 0.93rem;
+}
+
+.venue-card .info-table {
+  margin-top: auto;
+}
+
+.venue-card .info-table th,
+.venue-card .info-table td {
+  padding: 8px 0;
+  font-size: 0.86rem;
+}
+
+.venue-card .info-table th { width: 34%; }
+
+@media (max-width: 960px) {
+  .venue-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .venue-grid { grid-template-columns: 1fr; }
+}
+
 /* --------------------------------- Tables ---------------------------------- */
 
 table.info-table {
