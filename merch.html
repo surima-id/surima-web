@@ -185,7 +185,7 @@
           <table class="info-table">
             <tr><th>Warna</th><td>Hijau SURIMA (satu warna dulu)</td></tr>
             <tr><th>Depan</th><td>Chest mark tile Suro &amp; Boyo ±100 mm, dada kiri</td></tr>
-            <tr><th>Belakang</th><td>Logo + <i>Reach Beyond The Wall</i> + <b>nama personal</b> (maks. 12 karakter)</td></tr>
+            <tr><th>Belakang</th><td>Logo + <i>Reach Beyond The Wall</i> + <b>nama personal</b> (maks. 15 karakter)</td></tr>
             <tr><th>Ukuran</th><td>S – 5XL (lihat panduan ukuran)</td></tr>
             <tr><th>Sablon</th><td>DTG full colour</td></tr>
           </table>
@@ -285,10 +285,10 @@
         <p class="err">Pilih ukuran dulu (lihat panduan di atas bila ragu).</p>
       </div>
       <div class="field" id="f-back">
-        <label for="backname">Nama punggung <span class="hint">— dicetak persis apa adanya, maks. 12 karakter</span></label>
-        <input id="backname" name="backname" type="text" maxlength="12" placeholder="cth. ANDI" autocapitalize="characters">
-        <div class="char-count"><span id="backCount">0</span>/12</div>
-        <p class="err">1–12 karakter, huruf/angka/spasi/titik/underscore/strip saja.</p>
+        <label for="backname">Nama punggung <span class="hint">— dicetak persis apa adanya, maks. 15 karakter</span></label>
+        <input id="backname" name="backname" type="text" maxlength="15" placeholder="cth. ANDI" autocapitalize="characters">
+        <div class="char-count"><span id="backCount">0</span>/15</div>
+        <p class="err">1–15 karakter, huruf/angka/spasi/titik/underscore/strip saja.</p>
       </div>
       <dl class="summary" id="summary" hidden>
         <dt>Ringkasan pesanan</dt>
@@ -313,7 +313,7 @@
       <div class="card"><h3>Berapa lama sampai jadi?</h3><p>Pre-order dikumpulkan per batch lalu diproduksi sekaligus. Estimasi waktu diinformasikan admin via WhatsApp saat batch berjalan.</p></div>
       <div class="card"><h3>Bagaimana cara bayar?</h3><p>Transfer manual yang diatur lewat chat WhatsApp setelah pesanan dikonfirmasi. Tidak ada checkout otomatis di website.</p></div>
       <div class="card"><h3>Apakah ada warna lain?</h3><p>Untuk batch ini hanya <b>hijau SURIMA</b>. Warna lain menyusul bila ada batch berikutnya.</p></div>
-      <div class="card"><h3>Aturan nama punggung?</h3><p>Maksimal <b>12 karakter</b>, dicetak <b>persis</b> seperti yang kamu tulis (kapital ikut tercetak). Huruf, angka, spasi, titik, <i>underscore</i>, dan strip.</p></div>
+      <div class="card"><h3>Aturan nama punggung?</h3><p>Maksimal <b>15 karakter</b>, dicetak <b>persis</b> seperti yang kamu tulis (kapital ikut tercetak). Huruf, angka, spasi, titik, <i>underscore</i>, dan strip.</p></div>
     </div>
   </div>
 </section>
@@ -363,7 +363,7 @@
   var btn = $("waBtn"), summary = $("summary"), summaryText = $("summaryText");
   var mockBackName = $("mockBackName"), backCount = $("backCount");
 
-  var BACK_OK = /^[A-Za-z0-9 ._\-]{1,12}$/;
+  var BACK_OK = /^[A-Za-z0-9 ._\-]{1,15}$/;
 
   function normWa(v) { return v.replace(/[^\d+]/g, ""); }
   function validNama() { return nama.value.trim().length >= 2; }
