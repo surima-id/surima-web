@@ -8,6 +8,7 @@ Taruh logo tiap venue di folder ini dengan nama persis seperti berikut
 | `basecamp.jpg`         | Basecamp Board Game Cafe & Store   | @basecamp.boardgame  |
 | `tabletoys.jpg`        | Tabletoys Board Game               | @tabletoys           |
 | `grand-colosseum.jpg`  | Grand Colosseum Board Game         | @grandcolosseum      |
+| `threefrogs-mahjong.jpg` | Three Frogs Mahjong              | @threefrogs_mahjong  |
 | `tsumo-mahjong.jpg`    | Tsumo Mahjong (Malang)             | @tsumomahjong        |
 
 Cara ambil: buka profil Instagram venue, simpan foto profilnya, crop jadi
