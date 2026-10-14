@@ -14,6 +14,7 @@
   .price{font-size:2rem;font-weight:800;color:var(--green-800);margin:4px 0 0}
   .price small{font-size:.9rem;font-weight:600;color:var(--ink-soft)}
   .mock-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .mock-grid.hero-mocks{max-width:940px;margin:0 auto}
   @media (max-width:560px){.mock-grid{grid-template-columns:1fr}}
   .mock-card{background:#122420;border:1px solid var(--line);border-radius:var(--radius);
     padding:14px 14px 0;color:#cfe3d7}
@@ -152,10 +153,8 @@
 
 <section>
   <div class="container">
-    <div class="grid-2" style="align-items:start">
-      <div>
-        <span class="preorder-badge">Pre-order dibuka</span>
-        <div class="mock-grid">
+    <span class="preorder-badge">Pre-order dibuka</span>
+    <div class="mock-grid hero-mocks">
           <figure class="mock-card" style="margin:0">
             <svg viewBox="20 20 560 560" role="img" aria-label="Mockup tampak depan kaos hijau SURIMA dengan chest mark tile Suro dan Boyo di dada kiri">
               <use href="#tee-front"/>
@@ -166,18 +165,20 @@
           <figure class="mock-card" style="margin:0">
             <svg viewBox="20 20 560 560" role="img" aria-label="Mockup tampak belakang kaos dengan tulisan Reach Beyond The Wall dan nama punggung">
               <use href="#tee-back"/>
+              <g transform="translate(300,104) scale(1.15) translate(-300,-86)">
               <image href="assets/logo/surima-emblem-white.png" x="289" y="80" width="22" height="22"/>
               <text x="300" y="112" text-anchor="middle" font-family="Archivo,'Segoe UI',Arial,sans-serif" font-weight="900" font-size="10" letter-spacing="0.5" fill="#f7f3eb">SURIMA</text>
               <text x="300" y="124" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="800" font-size="9.5" letter-spacing="2.5" fill="#f7f3eb">REACH BEYOND</text>
               <text x="300" y="136" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="800" font-size="9.5" letter-spacing="2.5" fill="#f7f3eb">THE WALL</text>
               <rect x="270" y="140" width="60" height="2" fill="#d3a23b"/>
               <text id="mockBackName" x="300" y="152" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="10" letter-spacing="1.5" fill="#f7f3eb" opacity=".9">NAMAMU</text>
+              </g>
             </svg>
             <figcaption>Belakang · nama personal</figcaption>
           </figure>
         </div>
-        <p style="font-size:.85rem;color:var(--ink-soft);margin-top:10px">Mockup proporsi realistis: badan tidak lagi digambar memanjang. Ketik nama punggung di formulir — mockup belakang ikut berubah.</p>
-      </div>
+    <p style="font-size:.85rem;color:var(--ink-soft);max-width:920px;margin:10px auto 0">Mockup proporsi realistis: badan tidak lagi digambar memanjang. Ketik nama punggung di formulir — mockup belakang ikut berubah.</p>
+    <div class="grid-2" style="align-items:start;margin-top:22px">
       <div>
         <div class="card accent-top gold">
           <span class="tag gold">Hijau SURIMA · pre-order</span>
@@ -194,7 +195,9 @@
             <a class="btn btn-outline" href="#ukuran">Cek ukuran</a>
           </div>
         </div>
-        <div class="callout gold" style="margin-top:16px">
+      </div>
+      <div>
+        <div class="callout gold" style="margin-top:0">
           <strong>Sistem pre-order.</strong>
           <p style="margin-bottom:0">Pesanan dikumpulkan dulu, lalu diproduksi dalam batch. Estimasi dan pembayaran diatur lewat WhatsApp setelah kamu mengisi formulir.</p>
         </div>
