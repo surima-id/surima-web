@@ -177,7 +177,6 @@
             <figcaption>Belakang · nama personal</figcaption>
           </figure>
         </div>
-    <p style="font-size:.85rem;color:var(--ink-soft);max-width:920px;margin:10px auto 0">Mockup proporsi realistis: badan tidak lagi digambar memanjang. Ketik nama punggung di formulir — mockup belakang ikut berubah.</p>
     <div class="grid-2" style="align-items:start;margin-top:22px">
       <div>
         <div class="card accent-top gold">
@@ -198,8 +197,8 @@
       </div>
       <div>
         <div class="callout gold" style="margin-top:0">
-          <strong>Sistem pre-order.</strong>
-          <p style="margin-bottom:0">Pesanan dikumpulkan dulu, lalu diproduksi dalam batch. Estimasi dan pembayaran diatur lewat WhatsApp setelah kamu mengisi formulir.</p>
+          <strong>Siap dalam 1 minggu.</strong>
+          <p style="margin-bottom:0">Pesanan diproduksi setelah pembayaran dikonfirmasi. Pembayaran diatur lewat WhatsApp setelah kamu mengisi formulir.</p>
         </div>
       </div>
     </div>
@@ -262,10 +261,10 @@
       <p>Isi formulir, lalu kirim via WhatsApp. Pembayaran diatur lewat chat — belum ada pembayaran online.</p>
     </div>
     <ol class="steps" style="max-width:560px">
-      <li>Isi nama, nomor WA, ukuran, dan nama punggung (opsional).</li>
+      <li>Isi nama, nomor WA, ukuran, nama punggung (opsional), dan opsi pengiriman.</li>
       <li>Tekan <b>Kirim via WhatsApp</b> — chat terbuka dengan pesananmu sudah tertulis.</li>
       <li>Admin mengonfirmasi total + ongkir (jika perlu) dan pembayaran.</li>
-      <li>Kaos diproduksi dalam batch pre-order berikutnya.</li>
+      <li>Kaos siap dalam 1 minggu setelah pembayaran dikonfirmasi.</li>
     </ol>
     <form id="orderForm" class="form-grid" novalidate>
       <div class="field" id="f-nama">
@@ -293,6 +292,16 @@
         <div class="char-count"><span id="backCount">0</span>/15</div>
         <p class="err">1–15 karakter, huruf/angka/spasi/titik/underscore/strip saja.</p>
       </div>
+      <div class="field" id="f-kirim">
+        <label for="kirim">Opsi pengiriman</label>
+        <select id="kirim" name="kirim">
+          <option value="">— Pilih pengiriman —</option>
+          <option>Kirim via Kurir (JNE / JNT / dll.)</option>
+          <option>Gojek (instant)</option>
+          <option>Pick-up</option>
+        </select>
+        <p class="err">Pilih opsi pengiriman dulu.</p>
+      </div>
       <dl class="summary" id="summary" hidden>
         <dt>Ringkasan pesanan</dt>
         <dd id="summaryText"></dd>
@@ -313,7 +322,7 @@
       <h2>FAQ pre-order</h2>
     </div>
     <div class="grid-2">
-      <div class="card"><h3>Berapa lama sampai jadi?</h3><p>Pre-order dikumpulkan per batch lalu diproduksi sekaligus. Estimasi waktu diinformasikan admin via WhatsApp saat batch berjalan.</p></div>
+      <div class="card"><h3>Berapa lama sampai jadi?</h3><p>Kaos siap dalam <b>1 minggu</b> setelah pembayaran dikonfirmasi via WhatsApp.</p></div>
       <div class="card"><h3>Bagaimana cara bayar?</h3><p>Transfer manual yang diatur lewat chat WhatsApp setelah pesanan dikonfirmasi. Tidak ada checkout otomatis di website.</p></div>
       <div class="card"><h3>Apakah ada warna lain?</h3><p>Untuk batch ini hanya <b>hijau SURIMA</b>. Warna lain menyusul bila ada batch berikutnya.</p></div>
       <div class="card"><h3>Aturan nama punggung?</h3><p><b>Opsional</b> — boleh dikosongkan, kalau kosong yang tercetak generik <b>@surima.id</b>. Kalau diisi: maksimal <b>15 karakter</b>, dicetak <b>persis</b> seperti yang kamu tulis (kapital ikut tercetak). Huruf, angka, spasi, titik, <i>underscore</i>, dan strip.</p></div>
@@ -362,7 +371,7 @@
   var ADMIN_WA = "6285156760379";
   var PRICE = "Rp150.000";
   var $ = function (id) { return document.getElementById(id); };
-  var nama = $("nama"), wa = $("wa"), size = $("size"), back = $("backname");
+  var nama = $("nama"), wa = $("wa"), size = $("size"), back = $("backname"), kirim = $("kirim");
   var btn = $("waBtn"), summary = $("summary"), summaryText = $("summaryText");
   var mockBackName = $("mockBackName"), backCount = $("backCount");
 
@@ -389,17 +398,20 @@
     var okW = setState(wa, "f-wa", validWa());
     var okS = size.value !== "";
     $("f-size").classList.toggle("invalid", !okS && size.dataset.touched === "1");
+    var okK = kirim.value !== "";
+    $("f-kirim").classList.toggle("invalid", !okK && kirim.dataset.touched === "1");
     var okB = setState(back, "f-back", validBack());
     backCount.textContent = back.value.length;
     mockBackName.textContent = back.value === "" ? "@surima.id" : back.value;
 
-    var all = validNama() && validWa() && validSize() && validBack();
+    var all = validNama() && validWa() && validSize() && validBack() && kirim.value !== "";
     if (all) {
       var msg = "Halo SURIMA! Saya mau pre-order Kaos Suro Boyo.\n\n" +
         "Nama: " + nama.value.trim() + "\n" +
         "No. WA: " + normWa(wa.value) + "\n" +
         "Ukuran: " + size.value + "\n" +
         "Nama punggung: " + (back.value === "" ? "(kosong — pakai generik @surima.id)" : back.value) + "\n" +
+        "Pengiriman: " + kirim.value + "\n" +
         "Warna: Hijau SURIMA\n" +
         "Harga: " + PRICE + " (bayar via WhatsApp)\n\nTerima kasih.";
       btn.href = "https://wa.me/" + ADMIN_WA + "?text=" + encodeURIComponent(msg);
@@ -407,7 +419,7 @@
       btn.style.opacity = "1";
       btn.style.pointerEvents = "auto";
       summary.hidden = false;
-      summaryText.textContent = nama.value.trim() + " · " + size.value + " · “" + (back.value === "" ? "@surima.id (generik)" : back.value) + "” · " + normWa(wa.value);
+      summaryText.textContent = nama.value.trim() + " · " + size.value + " · “" + (back.value === "" ? "@surima.id (generik)" : back.value) + "” · " + kirim.value + " · " + normWa(wa.value);
     } else {
       btn.href = "#pesan";
       btn.setAttribute("aria-disabled", "true");
@@ -423,11 +435,13 @@
     el.addEventListener("blur", refresh);
   });
   size.addEventListener("change", function () { size.dataset.touched = "1"; refresh(); });
+  kirim.addEventListener("change", function () { kirim.dataset.touched = "1"; refresh(); });
   btn.addEventListener("click", function (e) {
     size.dataset.touched = "1";
+    kirim.dataset.touched = "1";
     if (!refresh()) {
       e.preventDefault();
-      var firstBad = !validNama() ? nama : (!validWa() ? wa : (!validSize() ? size : back));
+      var firstBad = !validNama() ? nama : (!validWa() ? wa : (!validSize() ? size : (!validBack() ? back : kirim)));
       firstBad.focus();
       firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
     }
