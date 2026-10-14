@@ -4,8 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kaos Suro Boyo — Pre-order — SURIMA</title>
-<meta name="description" content="Pre-order kaos komunitas SURIMA Suro Boyo: hijau SURIMA, chest mark tile Suro & Boyo, nama punggung personal. Rp150.000, pesan via WhatsApp.">
+<meta name="description" content="Pre-order kaos komunitas SURIMA Suro Boyo: hijau SURIMA, chest mark tile Suro & Boyo, nama punggung personal. Mulai Rp130.000, pesan via WhatsApp.">
 <link rel="icon" href="assets/logo/surima-emblem.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&display=swap">
 <link rel="stylesheet" href="css/styles.css">
 <style>
   .preorder-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-500);color:#2a2410;
@@ -15,6 +18,19 @@
   .price small{font-size:.9rem;font-weight:600;color:var(--ink-soft)}
   .mock-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .mock-grid.hero-mocks{max-width:940px;margin:0 auto}
+  .mock-card{position:relative;cursor:zoom-in}
+  .mock-card:focus-visible{outline:3px solid var(--gold-500);outline-offset:2px}
+  .mock-card .zoom-hint{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;
+    background:rgba(247,243,235,.94);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.35);pointer-events:none}
+  .mock-card .zoom-hint svg{width:18px;height:18px}
+  .lightbox-overlay .lightbox-body{display:flex;justify-content:center}
+  .lightbox-overlay svg{width:min(92vw,600px);height:auto;background:#122420;border-radius:10px;touch-action:none;cursor:grab}
+  .lightbox-overlay svg:active{cursor:grabbing}
+  .zoom-controls{display:flex;gap:10px;justify-content:center;margin-top:14px}
+  .zoom-controls button{background:rgba(247,243,235,.14);color:#fff;border:1px solid rgba(255,255,255,.3);
+    border-radius:999px;min-width:56px;padding:10px 16px;font-weight:800;font-size:1rem;cursor:pointer}
+  .zoom-controls button:hover{background:rgba(247,243,235,.25)}
   @media (max-width:560px){.mock-grid{grid-template-columns:1fr}}
   .mock-card{background:#122420;border:1px solid var(--line);border-radius:var(--radius);
     padding:14px 14px 0;color:#cfe3d7}
@@ -155,23 +171,26 @@
   <div class="container">
     <span class="preorder-badge">Pre-order dibuka</span>
     <div class="mock-grid hero-mocks">
-          <figure class="mock-card" style="margin:0">
+          <figure class="mock-card" style="margin:0" tabindex="0" role="button" aria-label="Perbesar mockup tampak depan" data-focus="200 165 100 85">
+            <span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#214f3c" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/><line x1="11" y1="8.5" x2="11" y2="13.5"/><line x1="8.5" y1="11" x2="13.5" y2="11"/></svg></span>
             <svg viewBox="20 20 560 560" role="img" aria-label="Mockup tampak depan kaos hijau SURIMA dengan chest mark tile Suro dan Boyo di dada kiri">
               <use href="#tee-front"/>
-              <g transform="translate(163,80) scale(0.27)"><use href="#chest-mark"/></g>
+              <g transform="translate(163,140) scale(0.27)"><use href="#chest-mark"/></g>
             </svg>
             <figcaption>Depan · dada kiri</figcaption>
           </figure>
-          <figure class="mock-card" style="margin:0">
+          <figure class="mock-card" style="margin:0" tabindex="0" role="button" aria-label="Perbesar mockup tampak belakang" data-focus="218 108 164 124">
+            <span class="zoom-hint" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#214f3c" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/><line x1="11" y1="8.5" x2="11" y2="13.5"/><line x1="8.5" y1="11" x2="13.5" y2="11"/></svg></span>
             <svg viewBox="20 20 560 560" role="img" aria-label="Mockup tampak belakang kaos dengan tulisan Reach Beyond The Wall dan nama punggung">
               <use href="#tee-back"/>
-              <g transform="translate(300,104) scale(1.15) translate(-300,-86)">
-              <image href="assets/logo/surima-emblem-white.png" x="289" y="80" width="22" height="22"/>
-              <text x="300" y="112" text-anchor="middle" font-family="Archivo,'Segoe UI',Arial,sans-serif" font-weight="900" font-size="10" letter-spacing="0.5" fill="#f7f3eb">SURIMA</text>
-              <text x="300" y="124" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="800" font-size="9.5" letter-spacing="2.5" fill="#f7f3eb">REACH BEYOND</text>
-              <text x="300" y="136" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="800" font-size="9.5" letter-spacing="2.5" fill="#f7f3eb">THE WALL</text>
-              <rect x="270" y="140" width="60" height="2" fill="#d3a23b"/>
-              <text id="mockBackName" x="300" y="152" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="10" letter-spacing="1.5" fill="#f7f3eb" opacity=".9">NAMAMU</text>
+              <g transform="translate(300,136) scale(1.15) translate(-300,-86)">
+              <image href="assets/logo/surima-emblem-white.png" x="255" y="76" width="26" height="26"/>
+              <text x="285" y="91" font-family="Archivo,'Segoe UI',Arial,sans-serif" font-weight="900" font-size="14" letter-spacing="0.5" fill="#f7f3eb">SURIMA</text>
+              <text x="313" y="99" text-anchor="middle" font-family="Archivo,'Segoe UI',Arial,sans-serif" font-weight="700" font-size="5" letter-spacing="0.2" fill="#f7f3eb">Surabaya Riichi Mahjong</text>
+              <text x="300" y="122" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="900" font-size="9.5" letter-spacing="3" fill="#f7f3eb">REACH BEYOND</text>
+              <text x="300" y="134" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="900" font-size="9.5" letter-spacing="3" fill="#f7f3eb">THE WALL</text>
+              <rect x="278" y="138" width="44" height="2.2" fill="#d3a23b"/>
+              <text id="mockBackName" x="300" y="151" text-anchor="middle" font-family="Archivo,Arial,sans-serif" font-weight="700" font-size="10" letter-spacing="1.5" fill="#f7f3eb" opacity=".9">surima.id</text>
               </g>
             </svg>
             <figcaption>Belakang · nama personal</figcaption>
@@ -181,7 +200,8 @@
       <div>
         <div class="card accent-top gold">
           <span class="tag gold">Hijau SURIMA · pre-order</span>
-          <p class="price">Rp150.000 <small>/ kaos · bayar via WhatsApp</small></p>
+          <p class="price">Rp130.000 <small>/ kaos S–XL · bayar via WhatsApp</small></p>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin-top:0">Ukuran jumbo: 2XL +Rp5rb · 3XL +Rp10rb · 4XL +Rp15rb · 5XL +Rp20rb</p>
           <table class="info-table">
             <tr><th>Warna</th><td>Hijau SURIMA (satu warna dulu)</td></tr>
             <tr><th>Depan</th><td>Chest mark tile Suro &amp; Boyo ±100 mm, dada kiri</td></tr>
@@ -215,16 +235,16 @@
     <div class="grid-2" style="align-items:start">
       <div class="size-table-wrap">
         <table class="size-table">
-          <thead><tr><th>Size</th><th>Lebar Dada (cm)</th><th>Panjang (cm)</th><th>Lengan (cm)</th></tr></thead>
+          <thead><tr><th>Size</th><th>Lebar Dada (cm)</th><th>Panjang (cm)</th><th>Lengan (cm)</th><th>Harga</th></tr></thead>
           <tbody>
-            <tr><th>S</th><td>47</td><td>67</td><td>19</td></tr>
-            <tr><th>M</th><td>50</td><td>70</td><td>19,5</td></tr>
-            <tr><th>L</th><td>53</td><td>73</td><td>20</td></tr>
-            <tr><th>XL</th><td>56</td><td>75</td><td>20,5</td></tr>
-            <tr><th>2XL</th><td>59</td><td>77</td><td>21</td></tr>
-            <tr><th>3XL</th><td>62</td><td>80</td><td>21,5</td></tr>
-            <tr><th>4XL</th><td>65</td><td>83</td><td>22</td></tr>
-            <tr><th>5XL</th><td>68</td><td>86</td><td>22,5</td></tr>
+            <tr><th>S</th><td>47</td><td>67</td><td>19</td><td>Rp130.000</td></tr>
+            <tr><th>M</th><td>50</td><td>70</td><td>19,5</td><td>Rp130.000</td></tr>
+            <tr><th>L</th><td>53</td><td>73</td><td>20</td><td>Rp130.000</td></tr>
+            <tr><th>XL</th><td>56</td><td>75</td><td>20,5</td><td>Rp130.000</td></tr>
+            <tr><th>2XL</th><td>59</td><td>77</td><td>21</td><td>Rp135.000</td></tr>
+            <tr><th>3XL</th><td>62</td><td>80</td><td>21,5</td><td>Rp140.000</td></tr>
+            <tr><th>4XL</th><td>65</td><td>83</td><td>22</td><td>Rp145.000</td></tr>
+            <tr><th>5XL</th><td>68</td><td>86</td><td>22,5</td><td>Rp150.000</td></tr>
           </tbody>
         </table>
       </div>
@@ -305,7 +325,7 @@
       <dl class="summary" id="summary" hidden>
         <dt>Ringkasan pesanan</dt>
         <dd id="summaryText"></dd>
-        <dd style="margin:0"><b>Rp150.000</b>/kaos · Hijau SURIMA · bayar via WhatsApp</dd>
+        <dd style="margin:0" id="summaryPrice"></dd>
       </dl>
       <div class="btn-row" style="margin-top:2px">
         <a class="btn btn-primary" id="waBtn" href="#" target="_blank" rel="noopener" aria-disabled="true">Kirim via WhatsApp</a>
@@ -325,7 +345,7 @@
       <div class="card"><h3>Berapa lama sampai jadi?</h3><p>Kaos siap dalam <b>1 minggu</b> setelah pembayaran dikonfirmasi via WhatsApp.</p></div>
       <div class="card"><h3>Bagaimana cara bayar?</h3><p>Transfer manual yang diatur lewat chat WhatsApp setelah pesanan dikonfirmasi. Tidak ada checkout otomatis di website.</p></div>
       <div class="card"><h3>Apakah ada warna lain?</h3><p>Untuk batch ini hanya <b>hijau SURIMA</b>. Warna lain menyusul bila ada batch berikutnya.</p></div>
-      <div class="card"><h3>Aturan nama punggung?</h3><p><b>Opsional</b> — boleh dikosongkan, kalau kosong yang tercetak generik <b>@surima.id</b>. Kalau diisi: maksimal <b>15 karakter</b>, dicetak <b>persis</b> seperti yang kamu tulis (kapital ikut tercetak). Huruf, angka, spasi, titik, <i>underscore</i>, dan strip.</p></div>
+      <div class="card"><h3>Aturan nama punggung?</h3><p><b>Opsional</b> — boleh dikosongkan, kalau kosong yang tercetak generik <b>surima.id</b>. Kalau diisi: maksimal <b>15 karakter</b>, dicetak <b>persis</b> seperti yang kamu tulis (kapital ikut tercetak). Huruf, angka, spasi, titik, <i>underscore</i>, dan strip.</p></div>
     </div>
   </div>
 </section>
@@ -369,7 +389,8 @@
 <script>
 (function () {
   var ADMIN_WA = "6285156760379";
-  var PRICE = "Rp150.000";
+  var PRICES = { S: 130000, M: 130000, L: 130000, XL: 130000, "2XL": 135000, "3XL": 140000, "4XL": 145000, "5XL": 150000 };
+  function rupiah(n) { return "Rp" + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
   var $ = function (id) { return document.getElementById(id); };
   var nama = $("nama"), wa = $("wa"), size = $("size"), back = $("backname"), kirim = $("kirim");
   var btn = $("waBtn"), summary = $("summary"), summaryText = $("summaryText");
@@ -402,7 +423,7 @@
     $("f-kirim").classList.toggle("invalid", !okK && kirim.dataset.touched === "1");
     var okB = setState(back, "f-back", validBack());
     backCount.textContent = back.value.length;
-    mockBackName.textContent = back.value === "" ? "@surima.id" : back.value;
+    mockBackName.textContent = back.value === "" ? "surima.id" : back.value;
 
     var all = validNama() && validWa() && validSize() && validBack() && kirim.value !== "";
     if (all) {
@@ -410,16 +431,17 @@
         "Nama: " + nama.value.trim() + "\n" +
         "No. WA: " + normWa(wa.value) + "\n" +
         "Ukuran: " + size.value + "\n" +
-        "Nama punggung: " + (back.value === "" ? "(kosong — pakai generik @surima.id)" : back.value) + "\n" +
+        "Nama punggung: " + (back.value === "" ? "(kosong — pakai generik surima.id)" : back.value) + "\n" +
         "Pengiriman: " + kirim.value + "\n" +
         "Warna: Hijau SURIMA\n" +
-        "Harga: " + PRICE + " (bayar via WhatsApp)\n\nTerima kasih.";
+        "Harga: " + rupiah(PRICES[size.value]) + " (bayar via WhatsApp)\n\nTerima kasih.";
       btn.href = "https://wa.me/" + ADMIN_WA + "?text=" + encodeURIComponent(msg);
       btn.setAttribute("aria-disabled", "false");
       btn.style.opacity = "1";
       btn.style.pointerEvents = "auto";
       summary.hidden = false;
-      summaryText.textContent = nama.value.trim() + " · " + size.value + " · “" + (back.value === "" ? "@surima.id (generik)" : back.value) + "” · " + kirim.value + " · " + normWa(wa.value);
+      summaryText.textContent = nama.value.trim() + " · " + size.value + " · “" + (back.value === "" ? "surima.id (generik)" : back.value) + "” · " + kirim.value + " · " + normWa(wa.value);
+      $("summaryPrice").innerHTML = "<b>" + rupiah(PRICES[size.value]) + "</b>/kaos · Hijau SURIMA · bayar via WhatsApp";
     } else {
       btn.href = "#pesan";
       btn.setAttribute("aria-disabled", "true");
@@ -447,6 +469,101 @@
     }
   });
   refresh();
+})();
+</script>
+<script>
+(function () {
+  var cards = document.querySelectorAll(".mock-card[data-focus]");
+  if (!cards.length) return;
+  var overlay = document.createElement("div");
+  overlay.className = "lightbox-overlay";
+  overlay.innerHTML = '<button class="lightbox-close" aria-label="Tutup">\u00d7</button><div class="lightbox-body"></div>';
+  var stage = overlay.querySelector(".lightbox-body");
+  var controls = document.createElement("div");
+  controls.className = "zoom-controls";
+  controls.setAttribute("role", "toolbar");
+  controls.setAttribute("aria-label", "Kontrol zoom");
+  controls.innerHTML = '<button type="button" data-z="out" aria-label="Perkecil">-</button>' +
+    '<button type="button" data-z="reset">Reset</button>' +
+    '<button type="button" data-z="in" aria-label="Perbesar">+</button>';
+  overlay.appendChild(controls);
+  document.body.appendChild(overlay);
+  var FIT = [20, 20, 560, 560];
+  var svgEl = null, focus = null, w = 0, cx = 0, cy = 0, aspect = 1, panning = null;
+  function apply() {
+    var h = w * aspect;
+    var x0 = Math.min(Math.max(cx - w / 2, FIT[0]), FIT[0] + FIT[2] - w);
+    var y0 = Math.min(Math.max(cy - h / 2, FIT[1]), FIT[1] + FIT[3] - h);
+    cx = x0 + w / 2; cy = y0 + h / 2;
+    svgEl.setAttribute("viewBox", x0.toFixed(1) + " " + y0.toFixed(1) + " " + w.toFixed(1) + " " + h.toFixed(1));
+  }
+  function zoom(f) {
+    if (!svgEl) return;
+    w = Math.min(FIT[2], Math.max(focus[2] / 4, w * f));
+    apply();
+  }
+  function reset() {
+    if (!svgEl) return;
+    w = focus[2]; cx = focus[0] + focus[2] / 2; cy = focus[1] + focus[3] / 2;
+    apply();
+  }
+  function close() {
+    overlay.classList.remove("open");
+    document.body.classList.remove("lightbox-open");
+    stage.innerHTML = ""; svgEl = null; panning = null;
+  }
+  function bindPan() {
+    svgEl.addEventListener("pointerdown", function (e) {
+      panning = { x: e.clientX, y: e.clientY };
+      try { svgEl.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+    svgEl.addEventListener("pointermove", function (e) {
+      if (!panning) return;
+      var r = svgEl.getBoundingClientRect();
+      var k = w / r.width;
+      cx -= (e.clientX - panning.x) * k;
+      cy -= (e.clientY - panning.y) * k;
+      panning = { x: e.clientX, y: e.clientY };
+      apply();
+    });
+    ["pointerup", "pointercancel"].forEach(function (t) {
+      svgEl.addEventListener(t, function () { panning = null; });
+    });
+    svgEl.addEventListener("dblclick", function () {
+      if (Math.abs(w - focus[2]) < 1) { w = focus[2] / 2.2; apply(); }
+      else reset();
+    });
+  }
+  function open(card) {
+    var svg = card.querySelector(":scope > svg");
+    if (!svg) return;
+    stage.innerHTML = "";
+    svgEl = svg.cloneNode(true);
+    stage.appendChild(svgEl);
+    var f = card.getAttribute("data-focus").split(" ").map(Number);
+    focus = f; aspect = f[3] / f[2];
+    reset();
+    overlay.classList.add("open");
+    document.body.classList.add("lightbox-open");
+    bindPan();
+  }
+  overlay.querySelector(".lightbox-close").addEventListener("click", close);
+  overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
+  overlay.querySelectorAll(".zoom-controls button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var z = b.getAttribute("data-z");
+      if (z === "in") zoom(1 / 1.4);
+      else if (z === "out") zoom(1.4);
+      else reset();
+    });
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
+  cards.forEach(function (card) {
+    card.addEventListener("click", function () { open(card); });
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(card); }
+    });
+  });
 })();
 </script>
 </body>
