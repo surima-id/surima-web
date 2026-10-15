@@ -1,0 +1,147 @@
+{
+  "title": "Ronde kedua — pilih dunia visual",
+  "question": "Roll baru menugaskan Kota Lama Tunjungan. Pertahankan, ambil alternatif, atau re-roll lagi.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Kota Lama Tunjungan",
+      "kicker": "THE ROLL",
+      "lineage": "ruko art-deco di Tunjungan; SURIMA sebagai toko tua yang hidup",
+      "thesis": "Komunitas ini toko lama di Tunjungan: pintu terbuka, papan enamel, kuningan — siapa pun boleh masuk tanpa pernah main.",
+      "palette": ["#1f5a43", "#be9440", "#a93a2c", "#efe8d9", "#1e1d1a"],
+      "materials": ["teraso", "papan enamel", "kusen kayu", "cahaya sore"],
+      "viewport": "Fasad toko sepenuh lebar: papan nama SURIMA di atas, rel 'kenalan — meja pemula — sesi penuh', dua jendela pajang, pintu hijau berisi dua CTA di tengah.",
+      "risk": "Nostalgia Kota Lama bisa jatuh jadi kitsch kalau ornamen kuningan tidak disiplin.",
+      "raised": [
+        {
+          "from": "challenger-azulejo",
+          "raise": "Kisi yang mengaku: kusen, sambungan, dan panel berbingkai diakui sebagai struktur cerita."
+        },
+        {
+          "from": "challenger-raku",
+          "raise": "Tiap tahap pemula punya jejak material di satu rel (kenalan → meja pemula → sesi penuh), bukan sekadar teks."
+        },
+        {
+          "from": "challenger-tdr",
+          "raise": "Satu teriakan tipografi per layar; warna datar, komitmen penuh, tanpa gradien hias."
+        },
+        {
+          "from": "challenger-emission",
+          "raise": "Status dibawa bentuk garis (utuh/ganda), bukan warna; warna tidak memikul makna."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "label": "Sura & Baya",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "mitos dua penjaga kota — hiu dan buaya",
+      "thesis": "Dua penjaga yang dulu berebut wilayah kini berbagi satu meja: tamu duduk di antaranya, bukan sebagai lawan.",
+      "palette": ["#173f3a", "#a63a2b", "#c09a45", "#e9dfc9", "#2b5a5e"],
+      "materials": ["pahatan rakyat", "sungai & muara", "kuningan"],
+      "viewport": "Dua penjaga berhadapan di kiri-kanan, judul di tengah, satu meja riichi berdiri di tepi air; plakat sungai di dasar.",
+      "risk": "Lambang kota yang sangat akrab — bisa terasa seperti lambang resmi kalau tidak digarap sebagai cerita.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-memphis",
+      "label": "Ruang Pamer Memphis",
+      "verdict": "competitive",
+      "lineage": "design canon — Memphis showroom, Milan 1981",
+      "thesis": "Kursi kosong di meja terasa seperti ruang pameran: bentuk lucu, warna keras, aturan yang enak ditonton.",
+      "palette": ["#efe8dc", "#141414", "#e2789f", "#8ed0b4", "#efc04a"],
+      "materials": ["garis tebal", "objek geometris", "squiggle"],
+      "viewport": "Kolom ganda: headline dengan blok stabilo di kiri, plakat miring di kanan, tiga blok lantai di bawah, gelombang di dasar layar.",
+      "case": "Menang di identifikasi audiens pop-muda; kalah tipis di kejelasan pintu pemula.",
+      "risk": "Bisa terasa pesta desain; kehangatan komunitas harus datang dari konten.",
+      "html": ".impeccable/mocks/decision/challenger-memphis.html",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-memphis-showroom-morning-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/design-canon-memphis-showroom-morning.webp"
+    },
+    {
+      "id": "challenger-sixpack",
+      "label": "Enam Instrumen",
+      "verdict": "competitive",
+      "lineage": "six-pack instrumen kokpit malam",
+      "thesis": "Enam jaminan komunitas diperiksa seperti daftar pra-terbang, supaya kamu masuk meja tanpa gugup.",
+      "palette": ["#0c0e0f", "#e9e5d9", "#9bcf83", "#3a3d3f"],
+      "materials": ["panel instrumen matte", "mono untuk data", "lampu status"],
+      "viewport": "Bar placard di atas, headline di tengah, enam dial sejajar dengan jarum tenang, landasan CTA dan strip status di dasar.",
+      "case": "Menang di kejelasan: enam janji terbaca sekali pandang; kalah di identifikasi lokal Surabaya.",
+      "risk": "Dingin dan maskulin; bisa terasa seperti perangkat, bukan komunitas.",
+      "html": ".impeccable/mocks/decision/challenger-sixpack.html",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack.webp"
+    },
+    {
+      "id": "challenger-azulejo",
+      "label": "Aula Stasiun Azulejo",
+      "verdict": "declined",
+      "lineage": "aula stasiun berubin azulejo Iberia",
+      "palette": ["#f4f1e8", "#2a5c8a", "#c8942f"],
+      "materials": ["ubin cetak", "kisi nat"],
+      "case": "Kalah di kedua poros: idiom Iberia tidak akrab bagi audiens Surabaya, kejelasan di bawah pintu toko terbuka.",
+      "kept": "Kisi yang mengaku — nat dan bingkai jadi struktur, bukan hiasan.",
+      "risk": "Terasa impor; konteks lokal hilang.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-places-azulejo-station-hall-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/architecture-places-azulejo-station-hall.webp"
+    },
+    {
+      "id": "challenger-raku",
+      "label": "Tungku Raku",
+      "verdict": "declined",
+      "lineage": "kiln raku — asap, retak, kilau",
+      "palette": ["#241a16", "#b4552d", "#d9c7a7"],
+      "materials": ["tanah liat matang", "kilau metalik"],
+      "case": "Kalah di kedua poros: metafora tungku terlalu jauh dari pengalaman pemula yang baru kenal.",
+      "kept": "Tahap transformasi sebagai jejak material (dingin → berpijar → mengilap).",
+      "risk": "Puitis tapi lambat dipahami.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash.webp"
+    },
+    {
+      "id": "challenger-tdr",
+      "label": "Sleeve Info-Noise",
+      "verdict": "declined",
+      "lineage": "sleeve TDR — informasi sebagai kebisingan terkendali",
+      "palette": ["#e8e4dc", "#111111", "#e0362c"],
+      "materials": ["barcode", "tipografi bising"],
+      "case": "Kalah di kedua poros: hostile brand salah untuk pintu hangat; hanya cocok untuk niche.",
+      "kept": "Satu teriakan tipografi per layar; warna datar dengan komitmen penuh.",
+      "risk": "Keras dan dingin; tidak mengundang pemula.",
+      "hero": "https://impeccable.style/worlds/cards/tdr-info-noise-sleeve-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/tdr-info-noise-sleeve.webp"
+    },
+    {
+      "id": "challenger-emission",
+      "label": "Rel Emisi",
+      "verdict": "declined",
+      "lineage": "rig spektroskopi garis emisi",
+      "palette": ["#0b0e14", "#d7dee8", "#7f8fa6"],
+      "materials": ["garis terkalibrasi", "gelap laboratorium"],
+      "case": "Kalah di kedua poros: dunia instrumen laboratorium bukan dunia audiens komunitas.",
+      "kept": "Status dibawa bentuk garis (utuh/putus/ganda); satu rel struktur; warna tidak memikul makna.",
+      "risk": "Netral sampai tak berkarakter untuk kota ini.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-emission-line-rail-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/operate-c-emission-line-rail.webp"
+    }
+  ],
+  "reroll": {
+    "registers": ["safer", "bolder"]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "Standar kategori",
+    "thesis": "Apa yang biasanya dikirim komunitas seperti ini, dieksekusi rapi: hero, tiga kartu, band ajakan.",
+    "palette": ["#fbfaf7", "#1f5a43", "#b64035", "#e3e0d8"],
+    "materials": ["grid bersih", "kartu lembut", "foto nyata"],
+    "viewport": "Hero dengan lambang, tiga kartu pintasan, dan band CTA; sepenuhnya konvensional.",
+    "risk": "Sengaja tak bisa dibedakan dari komunitas lain.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}

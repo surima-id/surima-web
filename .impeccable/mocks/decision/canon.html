@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>canon — Standar kategori</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1440px; height:900px; overflow:hidden; }
+  body { font-family:"Public Sans",system-ui,sans-serif; background:#fbfaf7; color:#1c2b23; }
+
+  header { border-bottom:1px solid #e3e0d8; }
+  .nav { max-width:1120px; margin:0 auto; display:flex; align-items:center; height:72px; padding:0 20px; }
+  .brand { font-weight:800; font-size:19px; letter-spacing:.01em; display:flex; align-items:center; gap:10px; }
+  .brand i { width:34px; height:34px; border-radius:9px; background:#1f5a43; color:#f2ead7;
+    display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800;
+    font-style:normal; }
+  .nav nav { margin-left:auto; display:flex; gap:4px; }
+  .nav a { color:#3c4a42; text-decoration:none; font-size:14.5px; font-weight:500; padding:8px 12px;
+    border-radius:8px; }
+  .nav a[aria-current] { background:#1f5a43; color:#fff; font-weight:600; }
+  .nav .join { background:#b64035; color:#fff; font-weight:700; margin-left:8px; }
+
+  .hero { max-width:1120px; margin:0 auto; padding:64px 20px 0; display:grid;
+    grid-template-columns:1.35fr 0.85fr; gap:48px; align-items:center; }
+  .hero h1 { font-size:52px; line-height:1.1; letter-spacing:-0.015em; font-weight:800; color:#14261d; }
+  .hero .lead { margin-top:20px; font-size:18.5px; line-height:1.6; color:#4d5b53; max-width:560px; }
+  .btns { display:flex; gap:12px; margin-top:30px; }
+  .btn { display:inline-block; border-radius:999px; padding:15px 30px; text-decoration:none;
+    font-weight:700; font-size:16px; background:#b64035; color:#fff; }
+  .btn.outline { background:transparent; border:2px solid #1f5a43; color:#1f5a43; padding:13px 26px; }
+  .trust { display:flex; gap:10px; margin-top:26px; flex-wrap:wrap; }
+  .trust span { border:1px solid #d8d4c8; background:#fff; border-radius:999px; padding:8px 16px;
+    font-size:13.5px; font-weight:600; color:#3c4a42; }
+  .emblem { justify-self:end; width:330px; height:330px; border-radius:24px; background:#f0ece1;
+    border:1px solid #e0dccf; display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:120px; color:#1f5a43; letter-spacing:-0.03em; }
+  .emblem small { display:block; }
+
+  .cards { max-width:1120px; margin:0 auto; padding:54px 20px 0; display:grid;
+    grid-template-columns:repeat(3,1fr); gap:20px; }
+  .card { background:#fff; border:1px solid #e3e0d8; border-radius:14px; padding:26px;
+    box-shadow:0 10px 30px rgba(23,63,48,.06); }
+  .card h3 { font-size:19px; color:#1f5a43; }
+  .card p { margin-top:10px; font-size:15px; line-height:1.55; color:#55645c; }
+  .card a { display:inline-block; margin-top:16px; color:#1f5a43; font-weight:700; font-size:14.5px;
+    text-decoration:none; border-bottom:2px solid #cfe0d4; padding-bottom:2px; }
+
+  .band { margin-top:52px; background:#1f5a43; color:#fff; }
+  .band .in { max-width:1120px; margin:0 auto; padding:30px 20px; display:flex; align-items:center;
+    justify-content:space-between; gap:20px; }
+  .band h2 { font-size:26px; }
+  .band p { color:#cfe0d4; margin-top:4px; font-size:15.5px; }
+  .band .btn { background:#fff; color:#1f5a43; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <span class="brand"><i>S</i>SURIMA</span>
+      <nav>
+        <a href="#" aria-current="page">Beranda</a><a href="#">Tentang Kami</a><a href="#">Kenali Riichi</a>
+        <a href="#">Komunitas</a><a href="#">Sumber Belajar</a><a href="#">Galeri</a><a href="#">Kaos</a>
+        <a class="join" href="#">Gabung</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Komunitas Riichi Mahjong di Surabaya</h1>
+      <p class="lead">Tempat pemain baru dan lama bertemu, belajar, dan berkembang bersama &mdash; lewat
+        gathering santai dan workshop yang ramah pemula.</p>
+      <div class="btns">
+        <a class="btn" href="#">Kenali Riichi Mahjong</a>
+        <a class="btn outline" href="#">Gabung Komunitas</a>
+      </div>
+      <div class="trust"><span>Beginner-friendly</span><span>Non-gambling</span><span>Berbasis Surabaya</span></div>
+    </div>
+    <div class="emblem">S</div>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>Tentang Kami</h3>
+      <p>Siapa kami, apa yang kami percaya, dan kenapa kegiatan kami bebas judi.</p>
+      <a href="#">Baca selengkapnya</a>
+    </div>
+    <div class="card">
+      <h3>Kenali Riichi</h3>
+      <p>Belum kenal Riichi? Pemain kami senang mengajarkan dasarnya ke pendatang baru.</p>
+      <a href="#">Mulai belajar</a>
+    </div>
+    <div class="card">
+      <h3>Komunitas</h3>
+      <p>Tempat kami biasa berkumpul dan cara ikut gathering berikutnya.</p>
+      <a href="#">Lihat komunitas</a>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="in">
+      <div>
+        <h2>Siap main?</h2>
+        <p>Ikut gathering berikutnya di Surabaya &mdash; tanpa perlu pengalaman.</p>
+      </div>
+      <a class="btn" href="#">Cara Bergabung</a>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>IMPECCABLE'S PICK — Sura &amp; Baya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1440px; height:900px; overflow:hidden; }
+  body { font-family:"Karla",system-ui,sans-serif; background:#e9dfc9; color:#22302a; position:relative; }
+  body::before { content:""; position:absolute; inset:0;
+    background:repeating-linear-gradient(-45deg, rgba(34,48,42,.035) 0 1px, transparent 1px 9px); }
+
+  .nav { position:relative; z-index:3; display:flex; align-items:center; gap:2px; height:62px; padding:0 34px; }
+  .nav .brand { font-family:"Alfa Slab One",serif; font-size:19px; letter-spacing:.04em; color:#173f3a;
+    margin-right:18px; }
+  .nav .brand small { font-family:"Karla",sans-serif; display:block; font-size:9.5px; letter-spacing:.26em;
+    text-transform:uppercase; color:#8a7a58; font-weight:700; margin-top:1px; }
+  .nav a { color:#4c4436; text-decoration:none; font-size:13.5px; font-weight:600; padding:8px 13px; }
+  .nav a[aria-current] { color:#e9dfc9; background:#173f3a; }
+  .nav .join { margin-left:auto; border:2px solid #a63a2b; color:#a63a2b; font-weight:800; padding:8px 18px; }
+
+  .stage { position:relative; z-index:2; display:grid; grid-template-columns:392px 1fr 392px; align-items:end;
+    padding:6px 30px 0; height:688px; }
+  .guardian { width:420px; height:auto; display:block; }
+  .guardian.left { margin-left:-14px; }
+  .guardian.right { transform:scaleX(-1); margin-right:-14px; }
+
+  .center { text-align:center; padding:0 12px; }
+  .center h1 { font-family:"Alfa Slab One",serif; font-size:56px; line-height:1.08; color:#22302a; }
+  .center h1 em { font-style:normal; color:#a63a2b; }
+  .center p.sub { max-width:560px; margin:18px auto 0; font-size:17.5px; line-height:1.55; color:#4c4436; }
+  .center p.sub strong { color:#173f3a; }
+  .ctas { margin-top:26px; display:flex; gap:12px; justify-content:center; }
+  .cta { display:inline-block; background:#a63a2b; color:#f4ead6; font-weight:800; font-size:16.5px;
+    padding:15px 28px; text-decoration:none; }
+  .cta.ghost { background:transparent; color:#173f3a; border:2.5px solid #173f3a; padding:12.5px 24px; font-weight:700; }
+
+  .tablewrap { position:relative; display:flex; flex-direction:column; align-items:center; margin-top:18px; }
+  .runsign { font-size:11.5px; letter-spacing:.3em; text-transform:uppercase; font-weight:800;
+    background:#c09a45; color:#241d0e; padding:7px 14px; margin-bottom:10px; }
+  table.riichi { border-collapse:separate; border-spacing:0; }
+  .top { width:300px; height:34px; background:#7a5f3c; border:3px solid #22302a; border-bottom:none;
+    border-radius:2px; }
+  .legs { display:flex; justify-content:space-between; width:240px; margin:0 auto; }
+  .legs i { width:26px; height:64px; background:#6b5233; border:3px solid #22302a; border-top:none; }
+  .tiles { height:34px; display:flex; gap:7px; align-items:center; justify-content:center; margin-top:-31px; }
+  .tiles b { width:26px; height:32px; background:#f4ead6; border:2.5px solid #22302a; border-radius:4px;
+    display:block; }
+  .tiles b.p2 { background:#e8d9b8; }
+  .tiles i { width:44px; height:11px; background:#f4ead6; border:2.5px solid #22302a; border-radius:999px; display:block; }
+
+  .river { position:absolute; left:0; right:0; bottom:0; height:150px; background:#2b5a5e; overflow:hidden; }
+  .river::before { content:""; position:absolute; inset:0;
+    background:repeating-linear-gradient(180deg, rgba(233,223,201,.22) 0 2px, transparent 2px 26px); }
+  .river .plaque { position:absolute; left:50%; top:34px; transform:translateX(-50%);
+    background:#e9dfc9; border:3px solid #22302a; padding:10px 20px; font-size:12px;
+    letter-spacing:.24em; text-transform:uppercase; font-weight:800; color:#173f3a; }
+  .river .wave { position:absolute; bottom:26px; height:3px; background:rgba(233,223,201,.5); border-radius:2px; }
+  .river .w1 { left:120px; width:210px; } .river .w2 { right:140px; width:160px; }
+  .river .w3 { left:420px; width:90px; bottom:44px; } .river .w4 { right:420px; width:110px; bottom:42px; }
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <span class="brand">SURIMA<small>Sura &amp; Baya</small></span>
+    <a href="#" aria-current="page">Beranda</a><a href="#">Tentang Kami</a><a href="#">Kenali Riichi</a>
+    <a href="#">Komunitas</a><a href="#">Sumber Belajar</a><a href="#">Galeri</a><a href="#">Kaos</a>
+    <a class="join" href="#">Gabung</a>
+  </nav>
+
+  <div class="stage">
+    <svg class="guardian left" viewBox="0 0 400 430" aria-hidden="true">
+      <!-- Sura, the shark: carved folk silhouette -->
+      <path fill="#173f3a" d="M60 214 L104 244 L62 300 L128 286 L196 262 L342 268 Q376 262 384 232 Q388 206 366 188 L240 120 Q196 92 150 100 Q108 108 84 150 L72 178 Q64 196 60 214 Z"/>
+      <path fill="#173f3a" d="M212 118 Q236 56 262 40 Q258 92 244 132 Z"/>
+      <path fill="#173f3a" d="M150 268 Q160 312 148 344 Q186 322 196 284 Z"/>
+      <g fill="#e9dfc9">
+        <path d="M330 196 L314 210 L330 210 L318 224 L340 224 L330 210 L344 210 Z" opacity=".9"/>
+        <circle cx="332" cy="182" r="9"/>
+      </g>
+      <path fill="none" stroke="#e9dfc9" stroke-width="5" d="M262 176 Q276 198 268 224 M240 168 Q252 192 246 218 M218 160 Q228 184 224 208" opacity=".55"/>
+      <path fill="#c09a45" d="M108 236 L150 262 L112 286 Z" opacity=".9"/>
+    </svg>
+
+    <div class="center">
+      <h1>Dua penjaga kota.<br><em>Satu meja.</em></h1>
+      <p class="sub">Hiu dan buaya dulu berebut wilayah sampai kota ini dinamai dari keduanya.
+        Di meja SURIMA berlaku hal yang sama: <strong>siapa pun yang datang duduk sebagai tamu — bukan lawan.</strong></p>
+      <div class="ctas">
+        <a class="cta" href="#">Ambil kursi pertamamu</a>
+        <a class="cta ghost" href="#">Kenali Riichi dulu</a>
+      </div>
+      <div class="tablewrap">
+        <span class="runsign">Bekas perbatasan mereka &middot; meja kita sekarang</span>
+        <div class="top"></div>
+        <div class="tiles">
+          <b></b><b class="p2"></b><b></b><b class="p2"></b><i></i>
+        </div>
+        <div class="legs"><i></i><i></i></div>
+      </div>
+    </div>
+
+    <svg class="guardian right" viewBox="0 0 400 430" aria-hidden="true">
+      <!-- Baya, the crocodile -->
+      <path fill="#a63a2b" d="M18 232 Q22 176 68 166 L300 150 Q368 146 384 190 Q392 214 374 232 Q392 252 374 274 Q348 314 292 312 L96 306 Q44 300 26 272 Q16 254 18 232 Z"/>
+      <path fill="#a63a2b" d="M60 300 L86 346 L120 306 Z M160 306 L186 352 L220 310 Z M266 308 L292 348 L322 310 Z"/>
+      <path fill="#a63a2b" d="M300 148 Q318 108 352 100 Q344 140 330 162 Z M238 152 Q248 116 276 104 Q274 138 262 158 Z"/>
+      <g fill="#e9dfc9">
+        <circle cx="330" cy="204" r="9"/>
+        <path d="M330 232 L316 246 L330 258 L346 246 Z" opacity=".85"/>
+        <path d="M84 190 L104 214 L82 216 Z" opacity=".7"/>
+        <path d="M368 232 L352 218 L352 246 Z" opacity=".85"/>
+      </g>
+      <path fill="none" stroke="#e9dfc9" stroke-width="5" d="M120 246 Q126 268 118 284 M170 244 Q176 266 168 284 M220 242 Q226 264 218 284" opacity=".5"/>
+    </svg>
+  </div>
+
+  <div class="river">
+    <span class="plaque">Sura &middot; Baya &middot; Surabaya</span>
+    <span class="wave w1"></span><span class="wave w2"></span><span class="wave w3"></span><span class="wave w4"></span>
+  </div>
+</body>
+</html>

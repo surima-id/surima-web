@@ -1,0 +1,23 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><title>Render pilihan safer</title><style>
+body{font-family:system-ui;margin:24px;background:#f5f5f5}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 2px 8px #0001}
+.mock{height:260px;border:1px solid #ddd;border-radius:8px;overflow:hidden;position:relative}
+h2{margin:0 0 8px}
+.notice{background:#f7f3eb}
+.notice h1{font-family:Georgia,serif;font-size:34px;margin:12px}
+.notice .pin{position:absolute;top:10px;left:10px;background:#c9a227;padding:6px 8px;border-radius:4px}
+.receipt{background:#fff7ed}
+.receipt .title{font-family:monospace;font-size:28px;margin:10px;border-bottom:2px dashed #333}
+.catalog{background:#eef3f8}
+.catalog .cardmini{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px}
+button{padding:8px12px;border:0;border-radius:6px;background:#1e2a24;color:#fff}
+</style></head><body>
+<h1>Render pilihan (safest candidate)</h1>
+<div class="grid">
+<div class="card"><h2>Papan Pengumuman</h2><div class="mock notice"><span class="pin"> pinned </span><h1>SURIMA</h1><p style="margin:12px">Event • Jadwal • Resources</p><div style="position:absolute;bottom:10px;left:12px"><button>Gabung</button></div></div></div>
+<div class="card"><h2>Struk Kopitiam</h2><div class="mock receipt"><div class="title">SURIMA</div><p style="margin:10px">Kopitiam community hub</p><p style="margin:10px">Latihan • Yaku • Apps</p><button>Gabung komunitas</button></div></div>
+<div class="card"><h2>Kartu Katalog Perpus</h2><div class="mock catalog"><div class="cardmini"><div style="background:#dce6f2;padding:6px">idx</div><div style="background:#dce6f2;padding:6px">resources</div><div style="background:#dce6f2;padding:6px">apps</div><div style="background:#dce6f2;padding:6px">merch</div></div><button style="margin:8px">Gabung</button></div></div>
+<div class="card"><h2>Standar kategori</h2><div class="mock" style="background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center"><h1>SURIMA</h1><p>Hero + 3 card + footer</p><button>Mulai</button></div></div>
+</div>
+</body></html>

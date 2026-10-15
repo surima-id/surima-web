@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>competitive — Ruang Pamer Memphis</title>
+<link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1440px; height:900px; overflow:hidden; }
+  body { font-family:"Rubik",system-ui,sans-serif; background:#efe8dc; color:#141414; position:relative; }
+  .squiggle { position:absolute; inset:auto 0 0 0; height:160px; opacity:.9;
+    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="56" height="28"><path d="M0 20 Q14 4 28 20 T56 20" fill="none" stroke="%23141414" stroke-width="3"/></svg>');
+    background-repeat:repeat; }
+  .speckle { position:absolute; top:110px; right:-60px; width:520px; height:520px; border-radius:50%;
+    background-image:radial-gradient(#141414 1.4px, transparent 1.8px), radial-gradient(#141414 1px, transparent 1.4px);
+    background-size:22px 22px, 13px 13px; background-position:0 0, 7px 9px; opacity:.22; }
+  .nav { position:relative; z-index:3; display:flex; align-items:center; gap:6px; height:64px; padding:0 36px; }
+  .nav .brand { font-family:"Chau Philomene One",sans-serif; font-size:21px; margin-right:20px; }
+  .nav a { text-decoration:none; color:#141414; font-size:13.5px; font-weight:500; padding:7px 12px; }
+  .nav a[aria-current] { background:#141414; color:#efe8dc; }
+  .nav .join { margin-left:auto; background:#e2789f; border:2.5px solid #141414; font-weight:700; padding:8px 18px; }
+
+  main { position:relative; z-index:2; display:grid; grid-template-columns:1.05fr 0.95fr; gap:24px;
+    padding:44px 64px 0; }
+  .copy h1 { font-family:"Chau Philomene One",sans-serif; font-size:62px; line-height:1.06; }
+  .copy h1 .mk { background:#8ed0b4; padding:0 10px; box-shadow:5px 5px 0 #141414; display:inline-block; }
+  .copy h1 .pk { color:#e2789f; }
+  .copy p { margin-top:24px; font-size:18px; line-height:1.6; max-width:560px; color:#2c2c2c; }
+  .okrow { display:flex; gap:10px; margin-top:30px; flex-wrap:wrap; }
+  .okrow span { border:2.5px solid #141414; background:#efe8dc; font-weight:700; font-size:13.5px;
+    padding:8px 14px; }
+  .okrow span:nth-child(2){ background:#8ed0b4; } .okrow span:nth-child(3){ background:#efc04a; }
+
+  .shelf { position:relative; margin-top:8px; }
+  .plank { background:#e2789f; border:3px solid #141414; transform:rotate(-3deg);
+    padding:30px 32px; box-shadow:8px 8px 0 #141414; }
+  .plank h2 { font-family:"Chau Philomene One",sans-serif; font-size:28px; line-height:1.2; }
+  .plank p { margin-top:10px; font-size:15.5px; color:#3a1f2b; }
+  .pressed { display:inline-block; margin-top:20px; background:#efc04a; border:3px solid #141414;
+    box-shadow:0 6px 0 #141414; text-decoration:none; color:#141414; font-weight:700; font-size:16.5px;
+    padding:14px 26px; }
+  .pressed:active { transform:translateY(3px); box-shadow:0 3px 0 #141414; }
+  .pressed.flat { background:#efe8dc; box-shadow:none; border-width:2.5px; padding:12px 22px;
+    font-weight:500; margin-left:10px; }
+  .objects { position:absolute; right:6px; top:-72px; display:flex; gap:16px; align-items:flex-end; }
+  .objects i { display:block; border:3px solid #141414; }
+  .obj-1 { width:52px; height:52px; background:#8ed0b4; border-radius:50%; }
+  .obj-2 { width:40px; height:66px; background:#efc04a; transform:rotate(9deg); }
+  .obj-3 { width:64px; height:40px; background:#e2789f; transform:rotate(-6deg); }
+  .obj-4 { width:46px; height:46px; background:#141414; transform:rotate(12deg);
+    clip-path:polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+
+  .floorrow { position:relative; z-index:2; display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
+    padding:56px 64px 0; }
+  .block { border:3px solid #141414; padding:24px 26px; background:#efe8dc; min-height:170px; }
+  .block b { display:block; font-size:18px; }
+  .block span { display:block; margin-top:8px; font-size:14.5px; color:#3c3c3c; max-width:32ch; }
+  .block.b2 { background:#8ed0b4; } .block.b3 { background:#efc04a; }
+</style>
+</head>
+<body>
+  <div class="speckle"></div>
+  <nav class="nav">
+    <span class="brand">SURIMA</span>
+    <a href="#" aria-current="page">Beranda</a><a href="#">Tentang Kami</a><a href="#">Kenali Riichi</a>
+    <a href="#">Komunitas</a><a href="#">Sumber Belajar</a><a href="#">Galeri</a><a href="#">Kaos</a>
+    <a class="join" href="#">Gabung</a>
+  </nav>
+
+  <main>
+    <div class="copy">
+      <h1>Belajar riichi <span class="mk">seharusnya</span> terasa seperti ruang <span class="pk">bermain.</span></h1>
+      <p>Gathering santai dan workshop yang ramah pemula, di Surabaya. Bawa rasa penasaran saja &mdash;
+        sisanya kami ajarkan sambil duduk semeja, tentu tanpa taruhan.</p>
+      <div class="okrow">
+        <span>Ramah pemula</span><span>Bebas judi</span><span>Berbasis Surabaya</span>
+      </div>
+    </div>
+    <div class="shelf">
+      <div class="objects"><i class="obj-1"></i><i class="obj-2"></i><i class="obj-3"></i><i class="obj-4"></i></div>
+      <div class="plank">
+        <h2>Meja berikutnya menunggu satu kursi kosong.</h2>
+        <p>Ikut gathering terdekat &mdash; pemain lama kami siap mengajari dasarnya dari nol.</p>
+        <a class="pressed" href="#">Lihat cara bergabung</a><a class="pressed flat" href="#">Kenali riichi dulu</a>
+      </div>
+    </div>
+  </main>
+
+  <div class="floorrow">
+    <div class="block b1"><b>Sesi santai</b><span>Dua&ndash;tiga putaran, ngobrol, tidak ada yang dikejar.</span></div>
+    <div class="block b2"><b>Workshop pemula</b><span>Aturan, istilah, dan kebiasaan meja &mdash; pelan-pelan.</span></div>
+    <div class="block b3"><b>Tempat kami</b><span>Venue lokal Surabaya: G-Walk sampai Grand City.</span></div>
+  </div>
+
+  <div class="squiggle"></div>
+</body>
+</html>

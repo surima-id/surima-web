@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>THE ROLL — Kota Lama Tunjungan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1440px; height:900px; overflow:hidden; }
+  body { font-family:"Karla",system-ui,sans-serif; background:#efe8d9; color:#1e1d1a; position:relative; }
+
+  /* sunset air above the roofs */
+  .sky { position:absolute; inset:0 0 auto 0; height:238px;
+    background:linear-gradient(180deg,#28384a 0%,#3c4a58 42%,#7a6a54 78%,#a5825a 100%); }
+  .sun { position:absolute; right:196px; top:104px; width:128px; height:128px; border-radius:50%;
+    background:#e9b45e; outline:12px solid rgba(233,180,94,.2); }
+
+  .street { position:relative; height:238px; }
+  .nav { position:relative; z-index:2; display:flex; align-items:center; gap:2px; padding:0 34px; height:58px; }
+  .nav .brand { font-family:"Bricolage Grotesque",sans-serif; font-weight:800; color:#f3ead6;
+    letter-spacing:.06em; font-size:15px; padding:8px 14px 8px 0; }
+  .nav a { color:#cfd8d2; text-decoration:none; font-size:13.5px; font-weight:500; padding:8px 13px;
+    border-radius:2px; }
+  .nav a[aria-current] { color:#1e1d1a; background:#e4c878; font-weight:700; }
+  .nav .join { margin-left:auto; background:#a93a2c; color:#f7efe2; font-weight:700; padding:9px 18px; }
+
+  /* facade */
+  .facade { position:absolute; inset:238px 0 0 0; background:#efe8d9; }
+  .pilasters { position:absolute; inset:0; display:grid; grid-template-columns:repeat(9,1fr); }
+  .pilasters i { border-right:2px solid rgba(30,29,26,.08); }
+  .pilasters i:nth-child(odd){ border-right-color:rgba(30,29,26,.16); }
+
+  .sign { position:relative; text-align:center; padding-top:22px; }
+  .sign h1 { font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:74px;
+    letter-spacing:.055em; line-height:1; color:#1f5a43; }
+  .rail { display:flex; align-items:center; gap:14px; width:740px; margin:18px auto 0; }
+  .rail span { font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:#6b5f4c; font-weight:800; }
+  .rail i { flex:1; height:0; border-top:3px solid #1f5a43; }
+  .rail i.dbl { border-top:3px double #be9440; }
+  .sign .sub { margin-top:12px; font-size:14px; letter-spacing:.12em; text-transform:uppercase; color:#6b5f4c; font-weight:700; }
+  .hook { margin-top:14px; text-align:center; font-size:20px; color:#4a443a; }
+  .hook strong { color:#1f5a43; }
+
+  /* shopfront */
+  .front { display:grid; grid-template-columns:1fr 470px 1fr; gap:26px; padding:20px 96px 0; }
+  .window { background:linear-gradient(180deg,#f7f1e2,#efe6d2); border:3px solid #1e1d1a;
+    border-bottom:none; padding:18px 24px 20px; position:relative; box-shadow:inset 0 0 0 6px #d9ceb6; }
+  .window::after { content:""; position:absolute; left:24px; right:24px; bottom:10px; height:3px; background:#be9440; }
+  .window h2 { font-family:"Bricolage Grotesque",sans-serif; font-size:14.5px; font-weight:700;
+    letter-spacing:.16em; text-transform:uppercase; color:#a93a2c; margin-bottom:12px; }
+  .sched { list-style:none; }
+  .sched li { display:flex; gap:12px; align-items:baseline; padding:14px 0; border-bottom:1px dashed #baa98a; }
+  .sched .day { font-weight:800; font-size:12.5px; color:#1f5a43; width:58px; text-transform:uppercase; letter-spacing:.04em; }
+  .sched .what { font-size:14.5px; }
+  .sched .what small { display:block; color:#6b5f4c; font-size:12.5px; }
+  .sched .time { margin-left:auto; font-weight:700; font-size:13.5px; color:#1e1d1a; white-space:nowrap; }
+
+  .plaque { border:3px solid #f7efe2; outline:3px solid #1f5a43; background:#1f5a43; color:#f2ead7;
+    padding:13px 18px; margin-bottom:12px; }
+  .plaque h3 { font-family:"Bricolage Grotesque",sans-serif; font-size:19px; letter-spacing:.08em; }
+  .plaque p { font-size:12.5px; color:#cfe0d4; margin-top:5px; }
+  .plaque.brass { background:#be9440; color:#241d0e; outline-color:#8a6a24; }
+  .plaque.brass p { color:#332a0e; }
+  .plaque.plain { background:#f7efe2; color:#1e1d1a; outline-color:#d9ceb6; }
+  .plaque.plain p { color:#6b5f4c; }
+
+  .door { position:relative; background:linear-gradient(180deg,#14261f,#1f3a2f); border:3px solid #1e1d1a;
+    border-bottom:none; padding:24px 30px; color:#f2ead7; text-align:center; }
+  .door .transom { font-family:"Bricolage Grotesque",sans-serif; font-size:13px; letter-spacing:.3em;
+    color:#e4c878; border-bottom:2px solid rgba(228,200,120,.4); padding-bottom:11px; margin-bottom:18px; }
+  .door h2 { font-family:"Bricolage Grotesque",sans-serif; font-size:29px; font-weight:800; line-height:1.14; }
+  .door p.lead { margin:12px 0 18px; font-size:15px; color:#cfe0d4; }
+  .cta { display:inline-block; background:#e4c878; color:#241d0e; font-weight:800; font-size:16px;
+    padding:14px 28px; text-decoration:none; }
+  .cta.ghost { background:transparent; color:#e4c878; border:2px solid #e4c878;
+    margin-left:10px; padding:12px 22px; font-weight:700; }
+  .door .hours { margin-top:16px; font-size:12px; letter-spacing:.08em; color:#9db3a4; text-transform:uppercase; }
+
+  /* sidewalk */
+  .walk { position:absolute; left:0; right:0; bottom:0; height:84px; background:#c9bda3;
+    background-image:radial-gradient(#b0a288 1px, transparent 1.4px), radial-gradient(#8f8064 1px, transparent 1.4px),
+      radial-gradient(#a49678 1px, transparent 1.2px);
+    background-size:34px 34px, 52px 52px, 23px 23px; background-position:0 0, 12px 20px, 20px 8px;
+    border-top:5px solid #1e1d1a; }
+  .walk .plates { display:flex; justify-content:space-between; align-items:center; height:100%; padding:0 96px; }
+  .walk .plate { background:#1e1d1a; color:#e4c878; font-size:11.5px; letter-spacing:.2em;
+    text-transform:uppercase; padding:9px 16px; }
+</style>
+</head>
+<body>
+  <div class="sky"><div class="sun"></div></div>
+  <div class="street">
+    <nav class="nav">
+      <span class="brand">SURIMA</span>
+      <a href="#" aria-current="page">Beranda</a><a href="#">Tentang Kami</a><a href="#">Kenali Riichi</a>
+      <a href="#">Komunitas</a><a href="#">Sumber Belajar</a><a href="#">Galeri</a><a href="#">Kaos</a>
+      <a class="join" href="#">Gabung</a>
+    </nav>
+  </div>
+  <div class="facade">
+    <div class="pilasters"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <header class="sign">
+      <h1>SURIMA</h1>
+      <div class="rail"><span>Kenalan</span><i></i><span>Meja pemula</span><i class="dbl"></i><span>Sesi penuh</span></div>
+      <p class="sub">Komunitas Riichi Mahjong &middot; Surabaya</p>
+      <p class="hook"><strong>Pintunya terbuka.</strong> Meja sudah disiapkan &mdash; kamu boleh datang tanpa pernah main sama sekali.</p>
+    </header>
+    <div class="front">
+      <section class="window" aria-label="Tempat bermain">
+        <h2>Tempat kami bermain</h2>
+        <ul class="sched">
+          <li><span class="day">Kamis</span><span class="what">Mahjong Night Club<small>Tabletoys &middot; Mulyosari</small></span><span class="time">18.00&ndash;24.00</span></li>
+          <li><span class="day">G-Walk</span><span class="what">Gathering SURIMA<small>Basecamp Board Game Cafe</small></span><span class="time">cek IG</span></li>
+          <li><span class="day">Pusat</span><span class="what">Sesi sore&ndash;malam<small>Grand Colosseum &middot; Grand City</small></span><span class="time">cek IG</span></li>
+          <li><span class="day">Timur</span><span class="what">Meja komunitas<small>Three Frogs &middot; Pakuwon City</small></span><span class="time">cek IG</span></li>
+        </ul>
+      </section>
+      <section class="door" aria-label="Masuk">
+        <p class="transom">M&nbsp;A&nbsp;S&nbsp;U&nbsp;K</p>
+        <h2>Baru pertama kali?<br>Kamu tamu kami.</h2>
+        <p class="lead">Pemain kami senang mengajarkan dasarnya ke pendatang baru &mdash; dari nol, tanpa tekanan.</p>
+        <a class="cta" href="#">Datang ke sesi pemula</a><a class="cta ghost" href="#">Kenali Riichi</a>
+        <p class="hours">Jadwal terbaru lewat Instagram @surima.id</p>
+      </section>
+      <section class="window" aria-label="Papan toko">
+        <div class="plaque"><h3>TANPA JUDI</h3><p>Seluruh kegiatan SURIMA bebas dari unsur perjudian &mdash; kami main untuk bertemu, bukan bertaruh.</p></div>
+        <div class="plaque brass"><h3>REACH BEYOND THE WALL</h3><p>Menerobos dinding meja: dari penonton jadi pemain.</p></div>
+        <div class="plaque plain"><h3>WARGA KOTA</h3><p>Main di venue lokal: G-Walk, Mulyosari, Grand City, Pakuwon City.</p></div>
+      </section>
+    </div>
+  </div>
+  <div class="walk">
+    <div class="plates">
+      <span class="plate">Kota Lama &middot; Surabaya</span>
+      <span class="plate">Selalu ada kursi untuk yang baru</span>
+    </div>
+  </div>
+</body>
+</html>

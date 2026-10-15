@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>competitive — Enam Instrumen</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1440px; height:900px; overflow:hidden; }
+  body { font-family:"Archivo Narrow",system-ui,sans-serif; background:#0c0e0f; color:#e9e5d9;
+    position:relative; }
+  body::after { content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(120% 90% at 50% -10%, rgba(233,229,217,.05), transparent 60%); }
+
+  .placardbar { display:flex; align-items:center; gap:8px; height:60px; padding:0 38px;
+    border-bottom:1px solid #2a2d2f; }
+  .placardbar .brand { font-weight:700; font-size:17px; letter-spacing:.14em; color:#e9e5d9;
+    border:1.5px solid #3a3d3f; padding:7px 12px; }
+  .placardbar .brand small { font-size:10px; letter-spacing:.2em; color:#8b8f88; font-weight:500;
+    display:block; margin-top:2px; }
+  .placardbar nav { margin-left:auto; display:flex; gap:2px; }
+  .placardbar nav a { color:#a9aca4; text-decoration:none; font-size:13px; letter-spacing:.06em;
+    padding:8px 12px; text-transform:uppercase; }
+  .placardbar nav a[aria-current] { color:#0c0e0f; background:#9bcf83; font-weight:700; }
+
+  .stage { padding:60px 64px 0; text-align:center; }
+  .stage h1 { font-size:47px; font-weight:600; letter-spacing:.01em; line-height:1.12; }
+  .stage h1 b { color:#9bcf83; font-weight:700; }
+  .stage p.sub { margin:14px auto 0; max-width:640px; font-size:17px; color:#b9bcb2; line-height:1.5; }
+
+  .sixpack { display:flex; justify-content:center; gap:34px; margin-top:48px; }
+  .gauge { width:172px; }
+  .gauge svg { display:block; margin:0 auto; }
+  .gauge b { display:block; margin-top:14px; font-size:13.5px; letter-spacing:.16em; font-weight:700;
+    text-transform:uppercase; color:#e9e5d9; }
+  .gauge span { display:block; margin-top:5px; font-family:"Spline Sans Mono",monospace; font-size:11.5px;
+    color:#8b8f88; letter-spacing:.04em; }
+  .gauge .ok { color:#9bcf83; }
+
+  .runway { display:flex; align-items:center; justify-content:center; gap:26px; margin-top:58px; }
+  .cta { display:inline-block; background:#9bcf83; color:#0c0e0f; font-weight:700; font-size:17px;
+    letter-spacing:.02em; padding:16px 34px; text-decoration:none; }
+  .cta.ghost { background:transparent; color:#e9e5d9; border:1.5px solid #4a4e50; padding:14.5px 28px;
+    font-weight:500; }
+  .runway .note { font-family:"Spline Sans Mono",monospace; font-size:12px; color:#8b8f88;
+    letter-spacing:.05em; }
+
+  .strip { position:absolute; left:0; right:0; bottom:0; height:78px; border-top:1px solid #2a2d2f;
+    display:flex; align-items:center; justify-content:space-between; padding:0 38px; }
+  .strip span { font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#9a9e96; }
+  .strip .lamp { display:inline-block; width:8px; height:8px; border-radius:50%; background:#9bcf83;
+    margin-right:8px; }
+</style>
+</head>
+<body>
+  <div class="placardbar">
+    <span class="brand">SURIMA<small>PRE-SESSION CHECKLIST</small></span>
+    <nav><a href="#" aria-current="page">Beranda</a><a href="#">Tentang Kami</a><a href="#">Kenali Riichi</a>
+      <a href="#">Komunitas</a><a href="#">Sumber Belajar</a><a href="#">Galeri</a><a href="#">Kaos</a>
+      <a href="#">Gabung</a></nav>
+  </div>
+
+  <div class="stage">
+    <h1>Sebelum main pertama,<br><b>enam jarum ini</b> harus tenang dulu.</h1>
+    <p class="sub">Komunitas riichi Surabaya dengan enam jaminan &mdash; diperiksa seperti daftar
+      pramu terbang, supaya kamu masuk meja tanpa gugup.</p>
+
+    <div class="sixpack">
+      <div class="gauge">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="72" fill="#101314" stroke="#3a3d3f" stroke-width="2"/>
+          <circle cx="80" cy="80" r="56" fill="none" stroke="#232729" stroke-width="8"/>
+          <path d="M80 80 L80 14" stroke="#e9e5d9" stroke-width="2" transform="rotate(38 80 80)"/>
+          <circle cx="80" cy="80" r="7" fill="#e9e5d9"/>
+          <path d="M118 118 L132 132" stroke="#9bcf83" stroke-width="3"/>
+        </svg>
+        <b>Ramah pemula</b><span class="ok">SET &mdash; 100%</span>
+      </div>
+      <div class="gauge">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="72" fill="#101314" stroke="#3a3d3f" stroke-width="2"/>
+          <circle cx="80" cy="80" r="56" fill="none" stroke="#232729" stroke-width="8"/>
+          <path d="M80 80 L80 14" stroke="#e9e5d9" stroke-width="2" transform="rotate(41 80 80)"/>
+          <circle cx="80" cy="80" r="7" fill="#e9e5d9"/>
+          <path d="M118 118 L132 132" stroke="#9bcf83" stroke-width="3"/>
+        </svg>
+        <b>Bebas judi</b><span class="ok">SET &mdash; 100%</span>
+      </div>
+      <div class="gauge">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="72" fill="#101314" stroke="#3a3d3f" stroke-width="2"/>
+          <circle cx="80" cy="80" r="56" fill="none" stroke="#232729" stroke-width="8"/>
+          <path d="M80 80 L80 14" stroke="#e9e5d9" stroke-width="2" transform="rotate(36 80 80)"/>
+          <circle cx="80" cy="80" r="7" fill="#e9e5d9"/>
+          <path d="M118 118 L132 132" stroke="#9bcf83" stroke-width="3"/>
+        </svg>
+        <b>Ajar dari nol</b><span class="ok">SET &mdash; 100%</span>
+      </div>
+      <div class="gauge">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="72" fill="#101314" stroke="#3a3d3f" stroke-width="2"/>
+          <circle cx="80" cy="80" r="56" fill="none" stroke="#232729" stroke-width="8"/>
+          <path d="M80 80 L80 14" stroke="#e9e5d9" stroke-width="2" transform="rotate(43 80 80)"/>
+          <circle cx="80" cy="80" r="7" fill="#e9e5d9"/>
+          <path d="M118 118 L132 132" stroke="#9bcf83" stroke-width="3"/>
+        </svg>
+        <b>Venue jelas</b><span class="ok">SET &mdash; 100%</span>
+      </div>
+      <div class="gauge">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="72" fill="#101314" stroke="#3a3d3f" stroke-width="2"/>
+          <circle cx="80" cy="80" r="56" fill="none" stroke="#232729" stroke-width="8"/>
+          <path d="M80 80 L80 14" stroke="#e9e5d9" stroke-width="2" transform="rotate(34 80 80)"/>
+          <circle cx="80" cy="80" r="7" fill="#e9e5d9"/>
+          <path d="M118 118 L132 132" stroke="#9bcf83" stroke-width="3"/>
+        </svg>
+        <b>Komunitas aktif</b><span class="ok">SET &mdash; 100%</span>
+      </div>
+      <div class="gauge">
+        <svg viewBox="0 0 160 160" aria-hidden="true">
+          <circle cx="80" cy="80" r="72" fill="#101314" stroke="#3a3d3f" stroke-width="2"/>
+          <circle cx="80" cy="80" r="56" fill="none" stroke="#232729" stroke-width="8"/>
+          <path d="M80 80 L80 14" stroke="#e9e5d9" stroke-width="2" transform="rotate(39 80 80)"/>
+          <circle cx="80" cy="80" r="7" fill="#e9e5d9"/>
+          <path d="M118 118 L132 132" stroke="#9bcf83" stroke-width="3"/>
+        </svg>
+        <b>Alat latihan gratis</b><span class="ok">SET &mdash; 100%</span>
+      </div>
+    </div>
+
+    <div class="runway">
+      <a class="cta" href="#">Lihat tempat &amp; jadwal</a>
+      <a class="cta ghost" href="#">Kenali riichi dulu</a>
+      <span class="note">6/6 &middot; SIAP TERBANG</span>
+    </div>
+  </div>
+
+  <div class="strip">
+    <span><i class="lamp"></i>Semua sistem hijau &middot; tanpa taruhan</span>
+    <span>Surabaya &middot; Reach Beyond the Wall</span>
+  </div>
+</body>
+</html>
