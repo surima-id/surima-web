@@ -1,0 +1,294 @@
+/* ==========================================================================
+   SURIMA — Decorasi riichi
+   A restrained decoration layer over the Sura & Baya world. Brass yaku
+   nameplates and wind discs mark each section, a single 1,000-point tenbou
+   lies between chapters, tiles drift across the hero bands, a hand of tiles
+   scrolls on the home page, and CTAs carry a pair of dice and the dealer mark.
+
+   Everything here is opt-in: it only renders when `decor.js` adds `.decor-on`
+   to <body>, so deleting the two linked files restores the original site.
+   Palette, edges, and type are inherited from styles.css (the source of truth).
+   ========================================================================== */
+
+:root {
+  --d-tw: 30px;               /* tile width; height derives at 112/149 */
+  --d-kanji: "Noto Serif CJK JP", "Noto Sans CJK JP", "Hiragino Mincho ProN",
+             "Yu Mincho", "MS Mincho", "Songti SC", serif;
+}
+
+/* A single tile face: the public-domain FluffyStuff riichi set (assets/tiles/). */
+.d-tile {
+  position: relative;
+  display: inline-block;
+  width: var(--d-tw);
+  aspect-ratio: 112 / 149;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+.d-tile img { width: 100%; height: 100%; display: block; object-fit: contain; }
+
+/* Kanji helper: forces a serif CJK stack so glyphs match the carved world. */
+.d-kanji {
+  font-family: var(--d-kanji);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* =========================== Section accessories ========================== */
+.d-section { position: relative; }
+
+.d-corner {
+  position: absolute;
+  top: 16px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.d-corner--tl { left: 16px; }
+.d-corner--tr { right: 16px; }
+
+/* Brass nameplate carrying a yaku. */
+.d-nameplate {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  background: var(--brass);
+  color: #241d0e;
+  border: var(--edge) solid var(--ink);
+  padding: 6px 11px 7px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 rgba(34, 48, 42, 0.18);
+}
+.d-nameplate .d-kanji {
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+}
+.d-nameplate small {
+  display: block;
+  font-size: 0.56rem;
+  letter-spacing: 0.26em;
+  opacity: 0.78;
+}
+
+/* Wind disc: square-cut seat marker. */
+.d-wind {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: var(--edge) solid var(--ink);
+  background: var(--green);
+  color: var(--paper);
+  font-size: 1.18rem;
+  box-shadow: 3px 3px 0 rgba(34, 48, 42, 0.18);
+}
+.d-wind.e { background: var(--green); }
+.d-wind.s { background: var(--brick); }
+.d-wind.w { background: var(--brass); color: #241d0e; }
+.d-wind.n { background: var(--river); }
+
+/* Dark page heroes anchor the floating tiles and invert the nameplate. */
+.d-hero-decor { position: relative; overflow: hidden; }
+.d-hero-decor .d-nameplate { background: var(--paper); color: var(--ink); }
+.d-hero-decor .d-corner { top: 20px; }
+.d-hero-decor .d-float .d-tile { filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.28)); }
+
+@media (max-width: 1260px) {
+  .d-corner { display: none; }
+}
+
+/* Tinted bands pick up a faint tile-outline weave, like a rack of tiles. */
+.decor-on .section-tinted {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='54' height='66'%3E%3Crect x='9' y='9' width='30' height='40' rx='3' fill='none' stroke='%2322302a' stroke-opacity='.05'/%3E%3C/svg%3E");
+  background-size: 54px 66px;
+}
+
+/* ================================ Dividers ================================ */
+/* A single 1,000-point tenbou, laid flat, marking the line between chapters. */
+.d-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 3vw, 30px);
+  padding: 30px 24px 26px;
+  overflow: hidden;
+}
+.d-divider .d-rule {
+  flex: 1 1 60px;
+  max-width: 300px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--line) 0 8px, transparent 8px 15px);
+}
+
+/* Point stick (tenbou): cream body, the dots carry the value. */
+.d-tenbou { display: inline-flex; }
+.d-tb-stick {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  width: 15px;
+  height: 58px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 7px;
+  box-shadow: 0 2px 0 rgba(34, 48, 42, 0.16);
+}
+.d-tb-line { display: flex; justify-content: center; gap: 3px; }
+.d-tb-dot {
+  display: block;
+  width: 3.6px;
+  height: 3.6px;
+  border-radius: 50%;
+}
+.d-tb-dot.k { background: var(--ink); }
+.d-tb-dot.r { background: var(--brick); }
+
+/* Laid on its side for the chapter divider. */
+.d-tenbou--flat .d-tb-stick { flex-direction: row; width: 62px; height: 14px; }
+
+/* ============================== Floating tiles ============================ */
+/* Tiles drift across the hero / river bands. */
+.d-float {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.92;
+}
+
+/* Keep floating ornament behind page copy. */
+.d-hero-decor > .container,
+.hero > .container,
+.hero > .scene-stage { position: relative; z-index: 2; }
+
+.d-float .d-tile { animation: d-drift var(--dur, 9s) ease-in-out infinite; }
+
+@keyframes d-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(var(--rot, 0deg)); }
+  50%      { transform: translate3d(var(--dx, 8px), var(--dy, -12px), 0) rotate(calc(var(--rot, 0deg) + 6deg)); }
+}
+
+/* ================================ Marquee ================================= */
+/* A scrolling hand of tiles and yaku names. Home page only. */
+.d-marquee {
+  position: relative;
+  overflow: hidden;
+  background: var(--green-deep);
+  border-top: var(--edge) solid var(--ink);
+  border-bottom: var(--edge) solid var(--ink);
+  padding: 12px 0;
+}
+.d-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  width: max-content;
+  animation: d-scroll 46s linear infinite;
+}
+.d-marquee:hover .d-marquee-track { animation-play-state: paused; }
+.d-marquee .d-tile { --d-tw: 26px; }
+.d-marquee .d-word {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--paper);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.d-marquee .d-word .d-kanji { font-size: 1.05rem; color: var(--brass); letter-spacing: 0.08em; }
+.d-marquee .d-sep { width: 1px; height: 26px; background: rgba(244, 234, 214, 0.28); }
+
+@keyframes d-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ============================== CTA dressing ============================== */
+.d-cta-deco { position: relative; }
+.d-dice {
+  position: absolute;
+  right: 16px;
+  bottom: -16px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+.d-die svg { width: 32px; height: 32px; display: block; }
+.d-oya {
+  position: absolute;
+  left: 16px;
+  top: -14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--brick);
+  color: var(--paper);
+  border: var(--edge) solid var(--ink);
+  padding: 4px 9px 5px;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 rgba(34, 48, 42, 0.18);
+}
+.d-oya .d-kanji { font-size: 0.95rem; letter-spacing: 0; }
+@media (max-width: 700px) { .d-cta-deco .d-dice, .d-cta-deco .d-oya { display: none; } }
+
+/* =========================== Browser surfaces ============================= */
+/* The parts we did not draw still carry the world. */
+.decor-on ::-webkit-scrollbar { width: 14px; height: 14px; }
+.decor-on ::-webkit-scrollbar-track { background: var(--stone-deep); }
+.decor-on ::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border: 3px solid var(--stone-deep);
+}
+.decor-on ::-webkit-scrollbar-thumb:hover { background: var(--brick); }
+
+.decor-on ol > li::marker { color: var(--brick); font-weight: 800; }
+.decor-on ul > li::marker { color: var(--brass-deep); }
+
+/* Active nav link carries a dealer pip. */
+.decor-on .nav-links a[aria-current="page"]::after {
+  content: "";
+  display: inline-block;
+  width: 5px; height: 5px;
+  margin-left: 7px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: var(--brass);
+}
+
+/* =============================== Responsive =============================== */
+@media (max-width: 760px) {
+  :root { --d-tw: 26px; }
+  .d-divider { padding: 22px 16px 20px; }
+  .d-nameplate small { display: none; }
+}
+
+@media (max-width: 620px) {
+  /* Floating tiles have nowhere to land on small screens: drop them. */
+  .d-float { display: none; }
+}
+
+@media (max-width: 520px) {
+  :root { --d-tw: 22px; }
+}
+
+/* ============================= Reduced motion ============================= */
+@media (prefers-reduced-motion: reduce) {
+  .d-float .d-tile,
+  .d-marquee-track {
+    animation: none !important;
+  }
+}

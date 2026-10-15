@@ -1,2 +1,5 @@
 # Raw photo/video dump — curated, optimized copies live in assets/gallery/
 galleries/
+
+# Design-agent preview sandboxes (screenshots, site copies) — not part of the site
+/preview*/
