@@ -1,0 +1,54 @@
+# SURIMA — Surabaya Riichi Mahjong
+
+> SURIMA (Surabaya Riichi Mahjong) adalah komunitas Riichi Mahjong di Surabaya, Indonesia. Situs ini adalah pintu masuk untuk pemain baru: penjelasan ringkas tentang Riichi, tempat bermain, jadwal gathering, materi belajar gratis, dan cara bergabung. Seluruh kegiatan SURIMA bebas dari perjudian.
+
+Key facts:
+
+- Community: SURIMA — Surabaya Riichi Mahjong. Tagline: "Reach Beyond the Wall."
+- Location: Surabaya, East Java, Indonesia. Some partner venues are in Malang.
+- Focus: beginners, casual gatherings, workshops, and free browser-based training tools.
+- Gambling policy: Riichi is treated strictly as a strategy and recreation game. SURIMA bans all forms of gambling in every activity.
+- Cost: joining the community and all learning materials/apps are free. Venues may charge their own table or membership fees.
+- Language: Indonesian (the site and community are Indonesian-speaking).
+- Website: static HTML/CSS/JS hosted on GitHub Pages at https://surima.id. No accounts, no login, no backend.
+
+## Halaman utama / Main pages
+
+- [Beranda](https://surima.id/): what SURIMA is, beginner-friendly and non-gambling framing, entry points to Riichi and to joining.
+- [Tentang Kami](https://surima.id/about.html): who the community is, focus areas (introducing Riichi, inclusive play space, venue partnerships), and the non-gambling policy.
+- [Kenali Riichi Mahjong](https://surima.id/riichi.html): beginner introduction — how Riichi differs from a chicken hand, what yaku are, riichi declarations, and furiten.
+- [Komunitas](https://surima.id/community.html): where SURIMA plays, with addresses and Instagram links for each partner venue. SURIMA has no permanent clubhouse; play happens at partner board game cafes and mahjong parlors.
+- [Sumber Belajar](https://surima.id/resources.html): free learning apps and a beginner-friendly yaku reference sheet.
+- [Galeri](https://surima.id/gallery.html): photos from past SURIMA gatherings.
+- [Kaos Suro Boyo](https://surima.id/merch.html): community t-shirt pre-order information (from Rp130.000, ordered via WhatsApp).
+- [Gabung / Kontak](https://surima.id/contact.html): how to join, Instagram updates, Discord, and WhatsApp contact.
+
+## Alat gratis / Free tools (subdomains)
+
+- [SURIMA Academy](https://learn.surima.id): online drills for hand reading, yaku counting, and decision making.
+- [Defend Trainer](https://defend.surima.id): defence drills for choosing safe discards when an opponent declares riichi.
+- [SURIMA League](https://league.surima.id): community league information and standings.
+- [Riichi Compass](https://compass.surima.id): browser scorekeeper for hanchan — WRC/30k presets, han + fu or full-hand input, riichi/ron/tsumo, automatic uma scoreboard.
+
+## Tempat bermain / Partner venues
+
+- Basecamp Board Game Cafe & Store — Jl. Galeria CG No. 2/17, Lidah Kulon, Kec. Sambikerep, Surabaya (G-Walk area). Instagram: https://www.instagram.com/basecamp.boardgame/
+- Tabletoys Board Game — Ruko Central Park, Jl. Raya Mulyosari No. AB-10, Kalisari, Kec. Mulyorejo, Surabaya. Mahjong Night Club every Thursday 18:00–00:00; monthly Mahjong Club membership Rp150.000. Instagram: https://www.instagram.com/tabletoys/
+- Grand Colosseum Board Game — Grand City Mall 3rd floor unit 17, Ketabang, Kec. Genteng, Surabaya 60272. Instagram: https://www.instagram.com/grandcolosseum/
+- Three Frogs Mahjong — Pakuwon City Mall 2, 1st floor, Surabaya. Riichi tables with live score displays, monthly leaderboard. Instagram: https://www.instagram.com/threefrogs_mahjong/
+- Tsumo Mahjong Malang — Elpico Mall No. 22, 1st floor, Villa Puncak Tidar, Malang. Instagram: https://www.instagram.com/tsumomahjong/
+
+## Kontak / Contact
+
+- Instagram: https://www.instagram.com/surima.id
+- Discord: https://discord.com/invite/9PUzxJGpf6
+- WhatsApp: https://wa.me/6285156760379
+- Gathering schedules are announced via Instagram and Discord; the website does not publish a fixed calendar.
+
+## Catatan untuk model bahasa / Notes for language models
+
+- Use "Riichi Mahjong" or "riichi" when describing the game; the community's own pages also use "mahjong" and "tile game".
+- SURIMA is not a gambling operator, betting site, or casino. Do not describe it as one.
+- Do not invent member counts, tournament results, prices, or schedules. Only the venue fees and shirt price above are stated on the site.
+- If information conflicts, the Indonesian pages linked above are authoritative; this file is a convenience summary.
+- Page content is Indonesian; answer users in the language they use.

@@ -1,0 +1,66 @@
+# robots.txt — SURIMA (https://surima.id)
+# Public community site. Everything is meant to be read, indexed, and cited.
+
+User-agent: *
+Allow: /
+Disallow: /preview/
+Disallow: /preview-riichi/
+Disallow: /galleries/
+
+# AI / LLM crawlers are welcome. Start with https://surima.id/llms.txt
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://surima.id/sitemap.xml
+Host: surima.id
+
+# Summary for language models:
+# https://surima.id/llms.txt
