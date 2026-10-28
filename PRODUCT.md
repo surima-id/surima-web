@@ -28,7 +28,7 @@ Content is in Indonesian. The site links to subdomain apps (learn.surima.id, def
 
 ## Capabilities and Constraints
 
-Confirmed functionality: 7 public marketing/information pages (home, about, riichi, community, resources, gallery, merch, contact); nav + mobile menu; external app links; merchandise ordering info. Confirmed constraints: static hosting, no account/auth, no runtime backend, preserved non-gambling statement, preserved app subdomain links, preserved content in Indonesian. Visual system is an incumbent implementation and may be replaced in redesign; product truth, content, functions, and constraints remain.
+Confirmed functionality: 7 public marketing/information pages (home, about, riichi, community, resources, merch, contact); nav + mobile menu; external app links; merchandise ordering info. The photo gallery lives as a section on the community page (`community.html#galeri`), and `gallery.html` is a redirect stub kept for old links. Confirmed constraints: static hosting, no account/auth, no runtime backend, preserved non-gambling statement, preserved app subdomain links, preserved content in Indonesian. Visual system is an incumbent implementation and may be replaced in redesign; product truth, content, functions, and constraints remain.
 
 ## Brand Commitments
 
@@ -36,7 +36,7 @@ Name: SURIMA (Surabaya Riichi Mahjong). Tagline: "Reach Beyond the Wall." Tri-co
 
 ## Evidence on Hand
 
-Public pages: index.html, about.html, riichi.html, community.html, resources.html, gallery.html, merch.html, contact.html. Shared stylesheet `css/styles.css`, JS `js/main.js`, assets under `assets/` (logos, yaku image). GitHub Pages custom domain (`CNAME`: surima.id). Some imagery and gallery photos are gitignored (`galleries/`).
+Public pages: index.html, about.html, riichi.html, community.html, resources.html, merch.html, contact.html. `gallery.html` remains only as a client-side redirect to `community.html#galeri`. Shared stylesheet `css/styles.css`, JS `js/main.js`, assets under `assets/` (logos, yaku image). GitHub Pages custom domain (`CNAME`: surima.id). Some imagery and gallery photos are gitignored (`galleries/`).
 
 ## Product Principles
 

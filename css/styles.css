@@ -78,6 +78,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
   scrollbar-color: var(--brass) var(--stone);
 }
 

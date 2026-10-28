@@ -17,9 +17,8 @@ Key facts:
 - [Beranda](https://surima.id/): what SURIMA is, beginner-friendly and non-gambling framing, entry points to Riichi and to joining.
 - [Tentang Kami](https://surima.id/about.html): who the community is, focus areas (introducing Riichi, inclusive play space, venue partnerships), and the non-gambling policy.
 - [Kenali Riichi Mahjong](https://surima.id/riichi.html): beginner introduction — how Riichi differs from a chicken hand, what yaku are, riichi declarations, and furiten.
-- [Komunitas](https://surima.id/community.html): where SURIMA plays, with addresses and Instagram links for each partner venue. SURIMA has no permanent clubhouse; play happens at partner board game cafes and mahjong parlors.
+- [Komunitas](https://surima.id/community.html): where SURIMA plays, with addresses and Instagram links for each partner venue. SURIMA has no permanent clubhouse; play happens at partner board game cafes and mahjong parlors. Also contains a photo gallery of past gatherings (`#galeri`).
 - [Sumber Belajar](https://surima.id/resources.html): free learning apps and a beginner-friendly yaku reference sheet.
-- [Galeri](https://surima.id/gallery.html): photos from past SURIMA gatherings.
 - [Kaos Suro Boyo](https://surima.id/merch.html): community t-shirt pre-order information (from Rp130.000, ordered via WhatsApp).
 - [Gabung / Kontak](https://surima.id/contact.html): how to join, Instagram updates, Discord, and WhatsApp contact.
 
