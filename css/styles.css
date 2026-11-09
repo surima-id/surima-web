@@ -29,6 +29,14 @@
   src: url("../assets/fonts/karla-italic-latin.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("../assets/fonts/archivo-latin.woff2") format("woff2");
+}
+
 :root {
   /* Ground and stone */
   --stone: #e9dfc9;
@@ -1190,10 +1198,35 @@ a.contact-card:hover {
   padding-top: 18px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   gap: 10px;
   font-size: 0.82rem;
   color: #9fb8ab;
+}
+
+/* Developer credit — Horulabs capsule (Archivo, as on horulabs.com). */
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cream);
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 7px 14px 7px 10px;
+  font-size: 0.82rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.footer-credit img { width: 20px; height: 20px; flex: none; }
+.footer-credit:hover { background: var(--paper); }
+
+.footer-credit strong {
+  font-family: "Archivo", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
 @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
