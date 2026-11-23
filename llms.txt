@@ -25,7 +25,6 @@ Key facts:
 ## Alat gratis / Free tools (subdomains)
 
 - [SURIMA Academy](https://learn.surima.id): online drills for hand reading, yaku counting, and decision making.
-- [Defend Trainer](https://defend.surima.id): defence drills for choosing safe discards when an opponent declares riichi.
 - [SURIMA League](https://league.surima.id): community league information and standings.
 - [Riichi Compass](https://compass.surima.id): browser scorekeeper for hanchan — WRC/30k presets, han + fu or full-hand input, riichi/ron/tsumo, automatic uma scoreboard.
 

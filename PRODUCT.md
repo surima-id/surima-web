@@ -24,7 +24,7 @@ A community-run Riichi Mahjong presence distinguished by beginner-focused worksh
 
 ## Operating Context
 
-Content is in Indonesian. The site links to subdomain apps (learn.surima.id, defend.surima.id, league.surima.id, compass.surima.id). Merchandise uses a print-order workflow documented elsewhere in the workspace. Events/workshops are run offline in Surabaya.
+Content is in Indonesian. The site links to subdomain apps (learn.surima.id, league.surima.id, compass.surima.id). Merchandise uses a print-order workflow documented elsewhere in the workspace. Events/workshops are run offline in Surabaya.
 
 ## Capabilities and Constraints
 
